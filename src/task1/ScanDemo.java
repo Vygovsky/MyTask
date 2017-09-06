@@ -13,8 +13,8 @@ public class ScanDemo {
 
     public static void getWord(Scanner sc) {
         try {
-            FileWriter wf = new FileWriter("Argument2.txt",false);
-            String s = sc.nextLine();
+            FileWriter wf = new FileWriter("src\\task1\\Argument2.txt",false);
+            String s = sc.nextLine().toLowerCase();
             if (s.contains("яйц")) {
                 wf.write(s);
                 wf.flush();
