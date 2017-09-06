@@ -13,10 +13,11 @@ public class ScanDemo {
 
     public static void getWord(Scanner sc) {
         try {
-            FileWriter wf = new FileWriter("Argument2.txt");
+            FileWriter wf = new FileWriter("Argument2.txt",false);
             String s = sc.nextLine();
-            if (s.contains("яйцо")) {
+            if (s.contains("яйц")) {
                 wf.write(s);
+                wf.flush();
             }else {
                 System.out.println("Слово не найдено");
             }
