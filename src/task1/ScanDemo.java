@@ -16,7 +16,7 @@ public class ScanDemo {
         try {
             wf = new FileWriter("src\\task1\\Argument2.txt",false);
             String s = sc.nextLine().toLowerCase();
-            if (s.contains(arg)) {
+            if (s.contains(arg.toLowerCase())) {
                 wf.write(s);
                 wf.flush();
             }else {
