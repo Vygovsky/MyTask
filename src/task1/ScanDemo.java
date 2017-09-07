@@ -8,14 +8,15 @@ import java.util.Scanner;
 public class ScanDemo {
     public static void main(String[] args) {
         Scanner sc2 = new Scanner(System.in);
-        getWord(sc2);
+        getWord(sc2,args[0]);
     }
 
-    public static void getWord(Scanner sc) {
+    public static void getWord(Scanner sc, String arg) {
+        FileWriter wf=null;
         try {
-            FileWriter wf = new FileWriter("src\\task1\\Argument2.txt",false);
+            wf = new FileWriter("src\\task1\\Argument2.txt",false);
             String s = sc.nextLine().toLowerCase();
-            if (s.contains("яйц")) {
+            if (s.contains(arg)) {
                 wf.write(s);
                 wf.flush();
             }else {
@@ -24,6 +25,12 @@ public class ScanDemo {
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
+        }finally {
+            try {
+                wf.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
