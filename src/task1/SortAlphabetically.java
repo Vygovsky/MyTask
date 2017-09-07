@@ -10,15 +10,16 @@ public class SortAlphabetically {
 
     public void getLetter(Scanner sc) {
         List<String> scr = new ArrayList<>();
-        String scanner = sc.nextLine();
-        if (scanner.compareTo(sc.nextLine()) < 0) {
+        String[] scanner = sc.nextLine().split("[\\s ]+ ");
+        if (sc.nextLine().compareTo(scanner))<0){
 
 
         }
 
     }
-    public static void getLetter2(Scanner sc){
+
+    public static void getLetter2(Scanner sc) {
         Arrays.stream(new Scanner(System.in).nextLine().split("[\\s ]+")).
-        sorted(Comparator.comparing(String::toLowerCase)).forEach(System.out::println);
+                sorted(Comparator.comparing(String::toLowerCase)).forEach(System.out::println);
     }
 }
