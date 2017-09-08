@@ -5,13 +5,13 @@ import java.util.*;
 public class SortAlphabetically {
     public static void main(String[] args) {
         Scanner sc2 = new Scanner(System.in);
-        bublSortArrayOfStrings(sc2);
+      sortArrayOfChar(sc2);
 
 
     }
 
-    public static void bublSortArrayOfStrings(Scanner sc) {
-        String[] words = sc.nextLine().split("[\\s ]+ ");
+    public static void sortArrayOfChar(Scanner sc) {
+        String[] words = sc.nextLine().split("\\s+");
         for (int i = 0; i < words.length; i++) {
             for (int j = words.length - 1; j > i; j--)
                 if (words[j].length() < words[j - 1].length()) {
@@ -23,6 +23,16 @@ public class SortAlphabetically {
         for (String word:words) {
             System.out.println(word);
 
+       }
+    }
+
+    public static void sortArrayOfLit(Scanner sc) {
+        String words = sc.nextLine();
+        if (words.compareTo(sc.nextLine())) {
+                    String temp = words;
+                    words = words[j - 1];
+                    words[j - 1] = temp;
+                }
 
         }
     }
