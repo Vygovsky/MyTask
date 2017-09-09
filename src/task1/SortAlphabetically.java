@@ -5,7 +5,9 @@ import java.util.*;
 public class SortAlphabetically {
     public static void main(String[] args) {
         Scanner sc2 = new Scanner(System.in);
-      sortArrayOfChar(sc2);
+       // sortArrayOfChar(sc2);
+        sortArrayOfLit(sc2);
+
 
 
     }
@@ -20,22 +22,29 @@ public class SortAlphabetically {
                     words[j - 1] = temp;
                 }
         }
-        for (String word:words) {
+        for (String word : words) {
             System.out.println(word);
-
-       }
-    }
-
-    public static void sortArrayOfLit(Scanner sc) {
-        String words = sc.nextLine();
-        if (words.compareTo(sc.nextLine())) {
-                    String temp = words;
-                    words = words[j - 1];
-                    words[j - 1] = temp;
-                }
 
         }
     }
+
+    public static void sortArrayOfLit(Scanner sc) {
+        List <String> list = new ArrayList<>();
+
+        while (sc.hasNextLine()) {
+            String s = sc.nextLine();
+            list.add(s);
+            if(s.compareTo(String.valueOf(list))>0){
+                List<String> temp=list;
+                temp=s;
+            }
+
+        }
+
+        System.out.println(list);
+
+    }
+
 
     public static void getLetter2(Scanner sc) {
         Arrays.stream(new Scanner(System.in).nextLine().split("[\\s ]+")).
