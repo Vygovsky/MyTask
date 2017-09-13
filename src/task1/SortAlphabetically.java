@@ -6,8 +6,8 @@ public class SortAlphabetically {
     public static void main(String[] args) {
         Scanner sc2 = new Scanner(System.in);
         // sortArrayOfChar(sc2);
-       // sortArrayOfLit(sc2);
-      // sortArrayOfAbc(sc2);
+        // sortArrayOfLit(sc2);
+        // sortArrayOfAbc(sc2);
         sortArrayOf2word(sc2);
 
 
@@ -51,11 +51,12 @@ public class SortAlphabetically {
         System.out.println(list);
 
     }
+
     public static void sortArrayOfAbc(Scanner sc) {
         String[] words = sc.nextLine().split("\\s+");
         for (int i = 0; i < words.length; i++) {
             for (int j = words.length - 1; j > i; j--)
-                if (words[j].compareTo(words[j-1])<0) {
+                if (words[j].compareTo(words[j - 1]) < 0) {
                     String temp = words[j];
                     words[j] = words[j - 1];
                     words[j - 1] = temp;
@@ -66,6 +67,7 @@ public class SortAlphabetically {
 
         }
     }
+
     public static void sortArrayOf2word(Scanner sc) {
         List<String> list = new ArrayList<>();
         while (true) {
@@ -79,15 +81,15 @@ public class SortAlphabetically {
         }
         for (int i = 0; i < list.size(); i++) {
             for (int j = list.size() - 1; j > i; j--) {
-   //             String firstStr = list.get(j);
-     //           int firstStrLength = firstStr.length();
-       //         int indexOfFirstSpaceOfFirstStr = firstStr.indexOf(' ');
-         //       String subFirstStr = firstStr.substring(indexOfFirstSpaceOfFirstStr+1, firstStrLength-1);
-
-                String secondStr = list.get(j-1);
+   /*           String firstStr = list.get(j);
+                int firstStrLength = firstStr.length();
+                int indexOfFirstSpaceOfFirstStr = firstStr.indexOf(' ');
+                String subFirstStr = firstStr.substring(indexOfFirstSpaceOfFirstStr+1, firstStrLength-1);
+  */
+                String secondStr = list.get(j - 1);
                 int secondStrLength = secondStr.length();
                 int indexOfFirstSpaceOfSecondStr = secondStr.indexOf(' ');
-                String subSecondStr = secondStr.substring(indexOfFirstSpaceOfSecondStr+1, secondStrLength-1);
+                String subSecondStr = secondStr.substring(indexOfFirstSpaceOfSecondStr + 1, secondStrLength - 1);
 
                 if (secondStr.compareTo(subSecondStr) < 0) {
                     String remove = list.remove(j - 1);
@@ -97,7 +99,6 @@ public class SortAlphabetically {
         }
         System.out.println(list);
     }
-
 
 
     public static void getLetter2(Scanner sc) {
