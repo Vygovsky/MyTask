@@ -22,10 +22,12 @@ public class CopyString {
     }
 
     public static void getTolk(String[] words) {
-        String[] strArrey = new String[3];
+        String[] strArrey = new String[words.length];
         StringBuilder sb = new StringBuilder();
-        for (int i = 1; i < strArrey.length; i++) {
-            sb.append(strArrey[i]);
+        for (int i = 0; i < strArrey.length; i++) {
+            for (int j = 0; j < 3; j++) {
+                sb.append(words[i]);
+            }
         }
     }
 }
