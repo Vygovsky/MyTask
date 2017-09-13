@@ -22,8 +22,8 @@ public class Demo2 {
         System.out.println(integerStringConverter.con(2));
 
 
-        int num = 1;
-        Converter<Integer, String> integerStringConverter2 = (from) -> String.valueOf(from + num);
-        System.out.println(integerStringConverter.con(2));
+       // int num = 1;
+       // Converter<Integer, String> integerStringConverter2 = (from) -> String.valueOf(from + num);
+       // System.out.println(integerStringConverter.con(2));
     }
 }
