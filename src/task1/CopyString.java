@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class CopyString {
     public static void main(String[] args) {
         String[] s = {"a", "bb", "ccc"};
+        getTolk(new String[]{"v", "mp","uuu"});
+
 
         for (String word : s) {
             System.out.println(word);
@@ -24,7 +26,9 @@ public class CopyString {
     public static void getTolk(String[] words) {
         String[] strArrey = new String[words.length];
         StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < strArrey.length; i++) {
+            strArrey[i]=sb.toString();
             for (int j = 0; j < 3; j++) {
                 sb.append(words[i]);
             }
