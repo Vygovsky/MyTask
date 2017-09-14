@@ -1,4 +1,4 @@
-package examples;
+package examples.page4;
 
 /**
  * Created by Roman_v on 11.09.2017.
