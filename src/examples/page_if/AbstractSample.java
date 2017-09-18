@@ -1,10 +1,13 @@
 package examples.page_if;
 
-public class AbstractSample {
-    public static int anInt(){
+import java.util.Random;
 
-     int result= (int) Math.random(anInt()*10);
-        System.out.println("Int value= "+result);
+
+public class AbstractSample {
+    public static int anInt() {
+        Random random = new Random();
+        int result = random.nextInt(5);
+        System.out.println("Int value= " + result);
         return result;
     }
 }
