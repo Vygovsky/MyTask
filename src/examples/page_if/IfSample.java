@@ -20,7 +20,6 @@ public class IfSample extends AbstractSample {
         } else {
             System.out.println("oni ne ravni");
         }
-
     }
 
     @Test
