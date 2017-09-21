@@ -9,9 +9,7 @@ public class StringLastIndex {
         getLastIndex(a);
         System.out.println();
         getLastIndex2(a);
-
-
-        }
+    }
 
     public static int[] getLastIndex2(int[] a) {
         for (int i = 0; i < a.length; i++) {
@@ -20,6 +18,7 @@ public class StringLastIndex {
         }
         return a;
     }
+
     public static int[] getLastIndex(int[] a) {
         for (int i = 0; i < a.length; i++) {
             String s = String.valueOf(a[i]);
@@ -29,8 +28,6 @@ public class StringLastIndex {
         }
         return a;
     }
-
-
 }
 
 
