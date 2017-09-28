@@ -1,7 +1,7 @@
 package examples.page_if;
 
-import org.junit.Assert;
-import org.junit.Test;
+//import org.junit.Assert;
+//import org.junit.Test;
 
 public class IfSample extends AbstractSample {
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class IfSample extends AbstractSample {
         }
     }
 
-    @Test
+   // @Test
     public void ternaryIf() {
         int largerNum;
         int lowNum = 9;
@@ -32,10 +32,10 @@ public class IfSample extends AbstractSample {
         } else {
             largerNum = lowNum;
         }
-        Assert.assertEquals(30,largerNum);
+//        Assert.assertEquals(30,largerNum);
         System.out.println(largerNum);
     }
-    @Test
+  //  @Test
     public void ternaryIf2() {
 
         int lowNum = 9;
