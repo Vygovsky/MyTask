@@ -8,32 +8,25 @@ public class CreateMassiv {
         getProba(array);
         System.out.println("--------------------------------------");
 
-
-        int[] array2 = new int[100];
+        int[] array2 = new int[50];
+        int index = 0;
         for (int i = 0; i < 100; i++) {
-            array2[i]=i;
             if (i % 2 != 0) {
-                System.out.print(array2[i] + " ");
-
-                }
-                for (int j =array2.length-1 ; j >0; j--) {
-                    System.out.println(array2[i]);
+                array2[index] = i;
+                System.out.print(array2[index++] + " ");
             }
         }
-
-        //        array2[i]=i;
-        //      if (array2[i] % 2 == 0) {
-        //          System.out.print(array2[i]+" ");
-
-        //      }
-
+        System.out.println();
+        for (int j = array2.length - 1; j >= 0; j--) {
+                System.out.print(array2[j] + " ");
+        }
     }
-
 
     public static int[] getProba(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
+        System.out.println();
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i] + " ");
         }
