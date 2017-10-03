@@ -1,7 +1,5 @@
 package task2;
 
-import java.util.Collections;
-
 public class CreateMassiv {
     public static void main(String[] args) {
         int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
