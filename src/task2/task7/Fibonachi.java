@@ -18,9 +18,8 @@ public class Fibonachi {
                 return 1;
             } else {
 
-
-            }
+            return fibonachi(j - 1) + fibonachi(j - 2);
         }
-        return fibonachi(j - 1) + fibonachi(j - 2);
+
     }
 }
