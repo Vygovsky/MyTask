@@ -5,21 +5,16 @@ import java.util.Arrays;
 public class Fibonachi {
     public static void main(String[] args) {
         int[] array = new int[20];
+        fibonachi(array);
 
 
     }
 
-    static int fibonachi(int[] i) {
-        for (int j = 0; j < i.length; j++) {
-            if (j == 1) {
-                return 1;
-            }
-            if (j == 2) {
-                return 1;
-            } else {
-
-            return fibonachi(j - 1) + fibonachi(j - 2);
+    public static void fibonachi(int[] i) {
+        int sum = 0;
+        for (int j = 3; j < i.length; j++) {
+            sum = sum + i[j];
+            System.out.println(sum);
         }
-
     }
 }
