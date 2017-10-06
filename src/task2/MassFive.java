@@ -23,7 +23,7 @@ public class MassFive {
 }
 */
 
-                int[] Mas=new int[4];
+   /*             int[] Mas=new int[4];
                 //С помощью первого цикла заполним значения елементов массива
                 for(int i=0;i<Mas.length;i++){
                     Mas[i]=(int)(Math.random()*90+10);
@@ -44,3 +44,6 @@ public class MassFive {
             }
         }
 
+                */
+    }
+}
