@@ -28,6 +28,7 @@ public class MassFoure {
         }
         System.out.println("=> Sum 2 = " + avr2);
 
+
         if (avr > avr2) {
             System.out.println("Первый массив больше чем второй");
         } else if (avr < avr2) {
