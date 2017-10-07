@@ -8,7 +8,6 @@ import java.util.Random;
 public class MassDemo10 {
     public static void main(String[] args) {
         int[] array=new int[11];
-
         Random random=new Random();
         for (int i = 0; i <array.length ; i++) {
             array[i]=random.nextInt(3)-1;
