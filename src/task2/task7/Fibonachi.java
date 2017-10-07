@@ -7,14 +7,17 @@ public class Fibonachi {
         int[] array = new int[20];
         fibonachi(array);
 
-
     }
 
-    public static void fibonachi(int[] i) {
-        int sum = 0;
-        for (int j = 3; j < i.length; j++) {
-            sum = sum + i[j];
-            System.out.println(sum);
+    public static void fibonachi(int[] array) {
+        int sum;
+        int a = 1;
+        int b = 0;
+        for (int j = 0; j < array.length; j++) {
+            sum = a + b;
+            a = b;
+            b = sum;
+            System.out.println(sum + " ");
         }
     }
 }
