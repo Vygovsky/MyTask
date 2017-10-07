@@ -16,7 +16,7 @@ public class MassFoure {
             array1[i] = ram.nextInt(6);
             System.out.print(array1[i] + " ");
             sum1 = sum1 + array1[i];
-            avr = sum1 % array1.length;
+            avr = (double) sum1 / array1.length;
         }
         System.out.println("=> Sum 1 = " + avr);
 
@@ -24,10 +24,9 @@ public class MassFoure {
             array2[i] = ram.nextInt(6);
             System.out.print(array2[i] + " ");
             sum2 = sum2 + array2[i];
-            avr2 = sum2 % array1.length;
+            avr2 = (double) sum2 / array1.length;
         }
         System.out.println("=> Sum 2 = " + avr2);
-
 
         if (avr > avr2) {
             System.out.println("Первый массив больше чем второй");
