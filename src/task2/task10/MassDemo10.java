@@ -29,7 +29,7 @@ public class MassDemo10 {
             }
         }
 
-        if (minusOne > zero & minusOne > plusOne) {
+        if (minusOne > zero && minusOne > plusOne) {
             System.out.println("Элемент -1 встречается в массиве чаще всего = " + minusOne);
         } else if (zero > minusOne && zero > plusOne) {
             System.out.println("Элемент 0 встречается в массиве чаще всего = " + zero);
