@@ -2,17 +2,30 @@ package task2.task12;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class NegativePositive {
     public static void main(String[] args) {
         Random random = new Random();
-        int plus, minus, zero;
-        int[] array = new int[12];
+        // int plus, minus, zero;
+        int[] array = new int[6];
+        int[] array2 = new int[6];
+        int[] array3 = new int[12];
         ArrayList<Integer> arr = new ArrayList<>();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(6) - 6;
+            array2[i] = random.nextInt(6) ;
+            System.out.print(array[i] + "; ");
+            System.out.print(array2[i] + "; ");
+            array3[i] = array2[i];
 
-        do {
+
+            System.out.println(array3[i]);
+
+       /* do {
             array[i]=random.nextInt();
+        }*/
         }
     }
 }
