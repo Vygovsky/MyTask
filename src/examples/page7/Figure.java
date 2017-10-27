@@ -7,9 +7,9 @@ public class Figure {
     public static void main(String[] args) {
         int count = 12;
         int count2 = 10;
-        for (int i = 0; i < count2+1; i++) {
+        for (int i = 0; i < count2 + 1; i++) {
             for (int j = 1; j < count; j++) {
-                if (j == count / 2 - i || j == count / 2 + i ||i==(count2-1)/2+j) {
+                if (j == count / 2 - i || j == count / 2 + i || i == (count2 - 1) / 2 + j || j == count2 / 2 + (count2 + 1) - i) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
