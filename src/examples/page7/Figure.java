@@ -5,51 +5,66 @@ package examples.page7;
  */
 public class Figure {
     public static void main(String[] args) {
-        int count = 11;
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j <count; j++) {
-                if ( j==count-1||i == (count - j) - 1 || i == count - 1) {
+        int count = 12;
+        int count2 = 10;
+        for (int i = 0; i < count2+1; i++) {
+            for (int j = 1; j < count; j++) {
+                if (j == count / 2 - i || j == count / 2 + i ||i==(count2-1)/2+j) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
                 }
             }
             System.out.println();
-        }
-    }
-}
-    /*int count = 10;
-        for (int i = 0; i < count; i++) {
-        for (int j = 0; j < count; j++) {
-        if (j == 0 || j == count-1||i==0||i==count-1) {
-        System.out.print("*");
-        } else {
-        System.out.print(" ");
-        }
+
+       /*
+                if (j == count / 2 - i || j == count / 2 + i || i == count2 - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
 
         }
-        System.out.println();*/
 
-    /*  int count = 11;
-        for (int i = 0; i < count; i++) {
-            for (int j = 0; j < count; j++) {
-                if (j == 0 || j == count-1||j==i||i==(count-j)-1||i==0||i==count-1) {
+
+        int count3 = 10;
+        for (int i = 0; i < count3; i++) {
+            for (int j = 0; j < count3; j++) {
+                if (j == 0 || j == count3 - 1 || i == 0 || i == count3 - 1) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
                 }
 
             }
-            System.out.println();*/
+            System.out.println();
+        }
 
-    /*int count = 11;
-        for (int i = 0; i < count; i++) {
-        for (int j = 0; j < count; j++) {
-        if ( j == i || i == (count - j) - 1 || i == 0 || i == count - 1) {
-        System.out.print("*");
-        } else {
-        System.out.print(" ");
+        int count4 = 11;
+        for (int i = 0; i < count4; i++) {
+            for (int j = 0; j < count4; j++) {
+                if (j == 0 || j == count4 - 1 || j == i || i == (count4 - j) - 1 || i == 0 || i == count4 - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println();
         }
-        }
-        System.out.println();
+
+        int count5 = 11;
+        for (int i = 0; i < count5; i++) {
+            for (int j = 0; j < count5; j++) {
+                if (j == i || i == (count5 - j) - 1 || i == 0 || i == count5 - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
         }*/
+        }
+    }
+}
