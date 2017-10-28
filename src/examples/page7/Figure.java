@@ -16,14 +16,20 @@ public class Figure {
                 }
             }
             System.out.println();
+        }
+        System.out.println();
 
-       /*
-                if (j == count / 2 - i || j == count / 2 + i || i == count2 - 1) {
+
+        int count6=6;
+         for (int i = 0; i < count6 + 1; i++) {
+            for (int j = 1; j < count; j++) {
+                if (j == count / 2 - i || j == count / 2 + i || i == count2-i ) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
                 }
             }
+             System.out.println();
 
         }
 
@@ -64,7 +70,6 @@ public class Figure {
                 }
             }
             System.out.println();
-        }*/
+        }
         }
     }
-}
