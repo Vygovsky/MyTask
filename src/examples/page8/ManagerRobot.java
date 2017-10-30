@@ -4,9 +4,6 @@ public class ManagerRobot {
     public static void main(String[] args) {
         RobotExt robot = new RobotExt(0,0,0);
 
-
-
-
         robot.forward(20);
         robot.getCoordinate();
 
@@ -20,8 +17,5 @@ public class ManagerRobot {
 
         robot.moveBack(10);
         robot.getCoordinate();
-
-
     }
-
 }
