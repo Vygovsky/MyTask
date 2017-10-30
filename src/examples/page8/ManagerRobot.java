@@ -13,12 +13,13 @@ public class ManagerRobot {
         robot.forward(20);
         System.out.println(robot.getCourse());
 
-       /* mr.changeCourse(robot);
-        robot.getCoordinate(robot.getCourse());
-*/
+        mr.changeCourse(robot);
+        System.out.println(robot.getCourse());
+
     }
 
     public void changeCourse(Robot robot) {
+        robot=new Robot();
         robot.setCourse(180);
     }
 }
