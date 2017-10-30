@@ -5,11 +5,11 @@ public class Robot {
     private double y = 0;
     protected double course = 0;
 
-   /* public Robot(double x, double y) {
+    public Robot(double x, double y) {
         this.x = x;
         this.y = y;
     }
-*/
+
     public double getX() {
         return x;
     }
@@ -32,6 +32,6 @@ public class Robot {
     }
 
     public void getCoordinate() {
-        System.out.println("Coordinate X= " + x + "\n" + "Coordinate Y= " + y);
+        System.out.println("Coordinate X= " + x + "\n" + "Coordinate Y= " + y + "\n");
     }
 }
