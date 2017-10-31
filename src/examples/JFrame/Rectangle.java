@@ -3,11 +3,10 @@ package examples.JFrame;
 import javax.swing.*;
 import java.awt.*;
 
-public class Oval extends JComponent{
-
+public class Rectangle extends JComponent {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawOval(5 ,5,50,50);
+        g.drawRect(5,5,100,100);
     }
 }
