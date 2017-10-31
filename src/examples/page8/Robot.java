@@ -1,7 +1,7 @@
 package examples.page8;
 
 public class Robot {
-    private double x = 0;
+    private double x = 0 ;
     private double y = 0;
     protected double course = 0;
 
