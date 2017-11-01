@@ -20,21 +20,21 @@ public class MassDemoScan {
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(50);
             System.out.print(array[i] + "; ");
+
         }
+        System.out.println();
         int value;
-        int index=0;
+        int index = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
-               value=array[i];
-               array2[i]=value;
-
-
+                value = array[i];
+                array2[i] = value;
+                index++;
             }
-            System.out.println();
-            System.out.print(array2[i]);
+            System.out.print(array2[i] + "; ");
+
         }
-
+        System.out.println(index);
     }
-
 
 }
