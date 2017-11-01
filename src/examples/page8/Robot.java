@@ -4,10 +4,19 @@ public class Robot {
     private double x = 0 ;
     private double y = 0;
     protected double course = 0;
+    private Operator operator;
 
     public Robot(double x, double y) {
         this.x = x;
         this.y = y;
+    }
+
+    public Operator getOperator() {
+        return operator;
+    }
+
+    public void setOperator(Operator operator) {
+        this.operator = operator;
     }
 
     public double getX() {
