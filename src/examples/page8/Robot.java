@@ -39,9 +39,13 @@ public class Robot {
         this.course = course;
     }
 
+    public ArrayList<RobotLine> getLine() {
+        return line;
+    }
+
     public void forward(int distance) {
         final double xOld = x;
-        final double yOld = x;
+        final double yOld = y;
 
         x += distance * Math.cos(course / 180 * Math.PI);
         y += distance * Math.sin(course / 180 * Math.PI);
