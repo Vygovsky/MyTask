@@ -6,6 +6,7 @@ public class QueueTest {
         for (int i = 0; i < 10; i++) {
             queue.push("Строка " + i);
         }
+
         while (queue.size() > 0) {
             String s = (String) queue.pull();
             System.out.println(s);

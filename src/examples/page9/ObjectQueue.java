@@ -68,5 +68,4 @@ public class ObjectQueue {
             this.next = next;
         }
     }
-
 }
