@@ -7,10 +7,12 @@ public class QueueTest {
             queue.push("Строка " + i);
         }
 
-         while (queue.size() > 0) {
+        while (queue.size() > 0) {
             String s = (String) queue.pull();
             System.out.println(s);
             System.out.println("Размер очереди: " + queue.size());
+           System.out.println(queue.get(5));
         }
+
     }
 }

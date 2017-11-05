@@ -52,6 +52,15 @@ public class ObjectQueue {
     private class ObjectBox {
         private Object object;
         private ObjectBox next;
+        private ObjectBox prev;
+
+        public ObjectBox getPrev() {
+            return prev;
+        }
+
+        public void setPrev(ObjectBox prev) {
+            this.prev = prev;
+        }
 
         public Object getObject() {
             return object;
