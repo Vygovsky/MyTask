@@ -8,10 +8,10 @@ public class QueueTest {
         }
 
         while (queue.size() > 0) {
-            String s = (String) queue.pull();
+            String s = (String) queue.stackPull();
             System.out.println(s);
             System.out.println("Размер очереди: " + queue.size());
-           System.out.println(queue.get(5));
+        //   System.out.println(queue.get(5));
         }
 
     }

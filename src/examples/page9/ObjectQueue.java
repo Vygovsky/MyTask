@@ -1,5 +1,7 @@
 package examples.page9;
 
+
+
 public class ObjectQueue {
     private ObjectBox head = null;
     private ObjectBox tail = null;
@@ -13,9 +15,47 @@ public class ObjectQueue {
         } else {
             tail.setNext(ob);
         }
+        ob.setPrev(tail);
         tail = ob;
         size++;
     }
+
+    public Object stackPull() {
+        if (size == 0) {
+            return null;
+        }
+        Object obj = tail.getObject();
+        tail = tail.getPrev();
+        if (head == null){
+            tail = null;}
+        size--;
+        return obj;
+    }
+
+   /* 1) public Object pushBack(Object obj) {
+        ObjectBox ob = new ObjectBox();
+        ob.setObject(obj);
+        if (head == null) {
+            head = ob;
+        } else {
+            tail.setNext(ob);
+        }
+        tail= ob;
+        size++;
+        return obj;
+    }*/
+   /*2) public void push(Object obj) {
+       ObjectBox ob = new ObjectBox();
+       ob.setObject(obj);
+       if (head == null) {
+           head = ob;
+       } else {
+           tail.setNext(ob);
+       }
+       ob.setPrev(tail);
+       tail = ob;
+       size++;
+   }*/
 
     public Object pull() {
         if (size == 0) {
@@ -25,6 +65,19 @@ public class ObjectQueue {
         head = head.getNext();
         if (head == null) {
             tail = null;
+        }
+        size--;
+        return obj;
+    }
+
+    public Object pullBack() {
+        if (size == 0) {
+            return null;
+        }
+        Object obj = tail.getObject();
+        tail = tail.getNext();
+        if (tail == null) {
+            head = null;
         }
         size--;
         return obj;
@@ -47,7 +100,6 @@ public class ObjectQueue {
         Object obj = current.getObject();
         return obj;
     }
-
 
     private class ObjectBox {
         private Object object;
