@@ -32,7 +32,8 @@ public class ObjectQueue {
         return obj;
     }
 
-   /* 1) public Object pushBack(Object obj) {
+
+    /* 1) public Object pushBack(Object obj) {
         ObjectBox ob = new ObjectBox();
         ob.setObject(obj);
         if (head == null) {

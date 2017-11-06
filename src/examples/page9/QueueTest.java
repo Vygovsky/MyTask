@@ -7,6 +7,7 @@ public class QueueTest {
             queue.push("Строка " + i);
         }
 
+
         while (queue.size() > 0) {
             String s = (String) queue.stackPull();
             System.out.println(s);
