@@ -15,26 +15,27 @@ public class MassDemoScan {
             System.exit(0);
         }
         int[] array = new int[n];
-        int[] array2 = new int[n];
+        int number = 0;
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(50);
             System.out.print(array[i] + "; ");
-
-        }
-        System.out.println();
-        int value;
-        int index = 0;
-        for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
-                value = array[i];
-                array2[i] = value;
-                index++;
+                number++;
             }
-            System.out.print(array2[i] + "; ");
-
         }
-        System.out.println(index);
-    }
 
+        int index = 0;
+        System.out.println();
+        int[] array2 = new int[number];
+        for (int i = 0, j = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0 & array[i] != 0) {
+                array2[j] = array[i];
+                index++;
+                System.out.print(array2[j] + "; ");
+            }
+                  }
+        System.out.println("\nКолличество четных элементов " + index);
+    }
 }
+
