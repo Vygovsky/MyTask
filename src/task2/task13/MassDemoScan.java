@@ -34,7 +34,7 @@ public class MassDemoScan {
                 index++;
                 System.out.print(array2[j] + "; ");
             }
-                  }
+        }
         System.out.println("\nКолличество четных элементов " + index);
     }
 }
