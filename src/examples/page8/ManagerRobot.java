@@ -5,13 +5,21 @@ import java.util.Arrays;
 
 public class ManagerRobot {
     public static void main(String[] args) {
-        Robot[] rb = new Robot[10];
-        for (int i = 0; i < rb.length; i++) {
-            rb[i] = new Robot(i * 10, i * 10);
+        int SIDE = 100;
+        int COUNT = 4;
+        Robot robot = new Robot(100, 100);
+        SemlpeRobotListr srl = new SemlpeRobotListr();
+        robot.setListener(srl);
+        for (int i = 0; i < COUNT; i++) {
+            robot.forward(SIDE);
+            robot.setCourse(robot.getCourse() + 360 / COUNT);
         }
-        for (int i = 0; i < rb.length; i++) {
-            rb[i].getCoordinate();
-        }
+        RobotFrame rf = new RobotFrame(robot);
+        rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        rf.setVisible(true);
+
+
+    }
 
 
 /*
@@ -30,9 +38,9 @@ public class ManagerRobot {
         robot.getCoordinate();
 */
 
-    }
-
 }
+
+
 //FIGURE
 /* final int STEP = 30;
         final int SiDE = 450;
@@ -69,3 +77,10 @@ public class ManagerRobot {
             RobotFrame rf = new RobotFrame(robot);
             rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             rf.setVisible(true);*/
+
+  /* Robot[] rb = new Robot[10];
+        for (int i = 0; i < rb.length; i++) {
+            rb[i] = new Robot(i * 10, i * 10);
+        }
+        for (int i = 0; i < rb.length; i++) {
+            rb[i].getCoordinate();*/
