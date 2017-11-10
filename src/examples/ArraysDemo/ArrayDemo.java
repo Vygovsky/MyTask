@@ -6,25 +6,18 @@ import java.util.Arrays;
 
 public class ArrayDemo {
     public static void main(String[] args) {
-        int size = 10;
-        char[][] a = new char[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
-                    a[i][j] = '#';
-                }else {
-                    a[i][j]=' ';
-                }
+        int[] a = {1, 2, 56, 78, 34, 12, 89};
+        char[][] graf={{'1', 'R', 'H', '&', '5', '@'}, {}, {'L', '0', 'I'}};
+        for (char[] chars : graf) {
+            for (char aChar : chars) {
+                System.out.print(aChar);
             }
-        }
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; j < size; j++) {
-                    System.out.print(a[i][j]);
-                }
-                System.out.println();
-            }
+            System.out.println();
         }
     }
+
+}
+
 
 /*
         ПРИМЕР №1
@@ -84,3 +77,36 @@ int[] sample = new int[5];
 
         }
 */
+
+/*       ПРИМЕР№5
+int size = 10;
+        char[][] a = new char[size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+                    a[i][j] = '#';
+                }else {
+                    a[i][j]=' ';
+                }
+            }
+        }
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    System.out.print(a[i][j]);
+                }
+                System.out.println();
+            }*/
+
+/*       ПРИМЕР№5
+int SIZE = 5;
+        char[][] graf = new char[SIZE][];
+        for (int i = 0; i < graf.length; i++) {
+            System.out.println(graf[i] == null);
+
+            //     for (int i = 0; i < graf.length; i++) {
+            int size = (int) Math.round(Math.random() * 50) + 25;
+            graf[i] = new char[size];
+        }
+        for (int i = 0; i <graf.length ; i++) {
+            System.out.println(graf[i].length);
+        }*/
