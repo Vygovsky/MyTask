@@ -6,6 +6,8 @@ import java.awt.*;
 
 public class MoveSquareFrame extends JFrame {
     public static final String UP = "UP";
+    public static final String RIGHT = "RIGHT";
+    public static final String LEFT = "LEFT";
     public static final String DOWN = "DOWN";
 
 
@@ -20,7 +22,18 @@ public class MoveSquareFrame extends JFrame {
         JButton btnDown = new JButton(DOWN);
         btnDown.setActionCommand(DOWN);
         btnDown.addActionListener(sc);
-        add(btnDown,BorderLayout.SOUTH);
-        setBounds(100,100,450,400);
+        add(btnDown, BorderLayout.SOUTH);
+
+        JButton btnLeft = new JButton(LEFT);
+        btnLeft.setActionCommand(LEFT);
+        btnLeft.addActionListener(sc);
+        add(btnLeft, BorderLayout.WEST);
+
+        JButton btnRight = new JButton(RIGHT);
+        btnRight.setActionCommand(RIGHT);
+        btnRight.addActionListener(sc);
+        add(btnRight, BorderLayout.EAST);
+
+        setBounds(100, 100, 400, 400);
     }
 }

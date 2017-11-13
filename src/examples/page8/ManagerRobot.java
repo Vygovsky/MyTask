@@ -5,11 +5,11 @@ import java.util.Arrays;
 
 public class ManagerRobot {
     public static void main(String[] args) {
-MoveSquareFrame msf=new MoveSquareFrame();
-msf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-msf.setVisible(true);
+        MoveSquareFrame msf = new MoveSquareFrame();
+        msf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        msf.setVisible(true);
 
-        /*int SIDE = 100;
+       /* int SIDE = 100;
         int COUNT = 4;
         Robot robot = new Robot(100, 200);
         SimlpeRobotListr srl = new SimlpeRobotListr();

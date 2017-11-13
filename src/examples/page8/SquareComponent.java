@@ -16,18 +16,28 @@ public class SquareComponent extends JComponent implements ActionListener {
         if (e.getSource() instanceof JButton) {
             JButton jbt = (JButton) e.getSource();
             if (MoveSquareFrame.UP.equals(jbt.getActionCommand())) {
-            y-=STEP;
+                y -= STEP;
             }
-            if(MoveSquareFrame.DOWN.equals(jbt.getActionCommand())){
-                y+=STEP;
+            if (MoveSquareFrame.DOWN.equals(jbt.getActionCommand())) {
+                y += STEP;
+            }
+            if (MoveSquareFrame.LEFT.equals(jbt.getActionCommand())) {
+                x -= STEP;
+            }
+            if (MoveSquareFrame.RIGHT.equals(jbt.getActionCommand())) {
+                x += STEP;
             }
             repaint();
         }
     }
 
+    private boolean check(){
+        if()
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawRect(x,y,SQUARE_SIZE,SQUARE_SIZE);
+        g.drawRect(x, y, SQUARE_SIZE, SQUARE_SIZE);
     }
 }
