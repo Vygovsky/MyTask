@@ -5,10 +5,14 @@ import java.util.Arrays;
 
 public class ManagerRobot {
     public static void main(String[] args) {
-        int SIDE = 100;
+MoveSquareFrame msf=new MoveSquareFrame();
+msf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+msf.setVisible(true);
+
+        /*int SIDE = 100;
         int COUNT = 4;
-        Robot robot = new Robot(100, 100);
-        SemlpeRobotListr srl = new SemlpeRobotListr();
+        Robot robot = new Robot(100, 200);
+        SimlpeRobotListr srl = new SimlpeRobotListr();
         robot.setListener(srl);
         for (int i = 0; i < COUNT; i++) {
             robot.forward(SIDE);
@@ -16,7 +20,7 @@ public class ManagerRobot {
         }
         RobotFrame rf = new RobotFrame(robot);
         rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        rf.setVisible(true);
+        rf.setVisible(true);*/
 
 
     }

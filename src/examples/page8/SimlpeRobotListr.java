@@ -1,6 +1,6 @@
 package examples.page8;
 
-public class SemlpeRobotListr implements RobotListener {
+public class SimlpeRobotListr implements RobotListener {
     @Override
     public void moveStart(double x, double y) {
         System.out.println("Робот начал движение " + x + "," + y);
