@@ -1,7 +1,6 @@
 package examples.page9;
 
 
-
 public class ObjectQueue {
     private ObjectBox head = null;
     private ObjectBox tail = null;
@@ -26,8 +25,9 @@ public class ObjectQueue {
         }
         Object obj = tail.getObject();
         tail = tail.getPrev();
-        if (head == null){
-            tail = null;}
+        if (head == null) {
+            tail = null;
+        }
         size--;
         return obj;
     }
@@ -45,18 +45,43 @@ public class ObjectQueue {
         size++;
         return obj;
     }*/
-   /*2) public void push(Object obj) {
-       ObjectBox ob = new ObjectBox();
-       ob.setObject(obj);
-       if (head == null) {
-           head = ob;
-       } else {
-           tail.setNext(ob);
-       }
-       ob.setPrev(tail);
-       tail = ob;
-       size++;
-   }*/
+    public void push2(Object obj) {
+        ObjectBox ob = new ObjectBox();
+        ob.setObject(obj);
+        if (head == null) {
+            head = ob;
+        } else {
+            tail.setNext(ob);
+        }
+        ob.setPrev(tail);
+        tail = ob;
+        size++;
+    }
+
+    public Object get2(int index) {
+        if (index == 0 || index >= size || index > 0) {
+            return null;
+        }
+        if (index < size / 2) {
+            ObjectBox current = head;
+            int pos = 0;
+            while (pos < index) {
+                current = current.getNext();
+                pos++;
+            }
+            Object obj = current.getObject();
+            return obj;
+        } else {
+            ObjectBox current = tail;
+            int pos = size - 1;
+            while (pos > index) {
+                current = current.getPrev();
+                pos--;
+            }
+            Object obj = current.getObject();
+            return obj;
+        }
+    }
 
     public Object pull() {
         if (size == 0) {
@@ -94,7 +119,7 @@ public class ObjectQueue {
         }
         ObjectBox current = head;
         int pos = 0;
-        if (pos < index) {
+        while (pos < index) {
             current = current.getNext();
             pos++;
         }
