@@ -31,8 +31,11 @@ public class SquareComponent extends JComponent implements ActionListener {
         }
     }
 
-    private boolean check(){
-        if()
+    private boolean check() {
+        if (this.x this.getBounds().width-SQUARE_SIZE)||(this.y this.getBounds().height-SQUARE_SIZE)){
+            return false;
+        }
+        return true;
     }
 
     @Override
