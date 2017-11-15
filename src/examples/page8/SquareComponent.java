@@ -17,22 +17,38 @@ public class SquareComponent extends JComponent implements ActionListener {
             JButton jbt = (JButton) e.getSource();
             if (MoveSquareFrame.UP.equals(jbt.getActionCommand())) {
                 y -= STEP;
+                if (check()) {
+                    System.out.println("Выход за пределы границы");
+                    y += STEP;
+                }
             }
             if (MoveSquareFrame.DOWN.equals(jbt.getActionCommand())) {
                 y += STEP;
+                if (check()) {
+                    System.out.println("Выход за пределы границы");
+                    y -= STEP;
+                }
             }
             if (MoveSquareFrame.LEFT.equals(jbt.getActionCommand())) {
                 x -= STEP;
+                if (check()) {
+                    System.out.println("Выход за пределы границы");
+                    x += STEP;
+                }
             }
             if (MoveSquareFrame.RIGHT.equals(jbt.getActionCommand())) {
                 x += STEP;
+                if (check()) {
+                    System.out.println("Выход за пределы границы");
+                    x -= STEP;
+                }
             }
             repaint();
         }
     }
 
     private boolean check() {
-        if (this.x this.getBounds().width-SQUARE_SIZE)||(this.y this.getBounds().height-SQUARE_SIZE)){
+        if ((this.x < this.getBounds().width - SQUARE_SIZE) || (this.y < this.getBounds().height - SQUARE_SIZE)) {
             return false;
         }
         return true;
