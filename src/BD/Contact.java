@@ -4,13 +4,13 @@ public class Contact {
     private Long id;
     private String name;
     private String lastName;
-    private int phone;
+    private String phone;
     private String mail;
 
-    public Contact() {
+    public Contact(Long cId1, String михаил, String троцкий, String s, String s1) {
     }
 
-    public Contact(Long id, String name, String lastName, int phone, String mail) {
+    public Contact(String name) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -18,7 +18,7 @@ public class Contact {
         this.mail = mail;
     }
 
-    public Contact(String name, String lastName, int phone, String mail) {
+    public Contact(String name, String lastName, String phone, String mail) {
         this.name = name;
         this.lastName = lastName;
         this.phone = phone;
@@ -49,11 +49,11 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

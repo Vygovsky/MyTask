@@ -1,10 +1,12 @@
 package BD;
 
+import java.util.List;
+
 public class ManagerContact {
     private ContactDAO dao;
 
-    public ManagerContact(ContactDAO dao) {
-
+    public ManagerContact() {
+        dao = ContactDAOFactory.getContactDAO();
     }
 
     public Long addContact(Contact contact) {
@@ -23,7 +25,7 @@ public class ManagerContact {
         return dao.getContact(id);
     }
 
-    public void getContacts() {
-        dao.findContacts();
+    public List<Contact> getContacts() {
+        return dao.findContacts();
     }
 }
