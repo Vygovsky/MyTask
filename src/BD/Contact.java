@@ -7,10 +7,10 @@ public class Contact {
     private String phone;
     private String mail;
 
-    public Contact(Long cId1, String михаил, String троцкий, String s, String s1) {
+    public Contact() {
     }
 
-    public Contact(String name) {
+    public Contact(Long id,String name, String lastName, String phone, String mail) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
