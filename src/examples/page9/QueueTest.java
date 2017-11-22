@@ -12,7 +12,7 @@ public class QueueTest {
             String s = (String) queue.pull();
              System.out.println(s);
             System.out.println("Размер очереди: " + queue.size());
-           System.out.println(queue.get2(queue.size()-5));
+        //   System.out.println(queue.get2(queue.size()-5));
         }
 
     }
