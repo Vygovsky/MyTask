@@ -25,7 +25,7 @@ public class ManagerContact {
         return dao.getContact(id);
     }
 
-    public List<Contact> getContacts() {
+    public List<Contact> findContacts() {
         return dao.findContacts();
     }
 }

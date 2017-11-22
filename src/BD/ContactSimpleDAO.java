@@ -24,7 +24,6 @@ public class ContactSimpleDAO implements ContactDAO {
             oldContact.setPhone(contact.getPhone());
             oldContact.setMail(contact.getMail());
         }
-
     }
 
     @Override
@@ -35,7 +34,7 @@ public class ContactSimpleDAO implements ContactDAO {
     @Override
     public Contact getContact(Long id) {
         for (Contact contact : contacts) {
-            contact.getId().equals(id);
+           if( contact.getId().equals(id));
             return contact;
         }
         return null;
@@ -46,7 +45,7 @@ public class ContactSimpleDAO implements ContactDAO {
         return contacts;
     }
 
-    private Long generateId() {
+    public Long generateId() {
         Long contactId = Math.round(Math.random() * 1000 + System.currentTimeMillis());
         while (getContact(contactId) != null) {
             contactId = Math.round(Math.random() * 1000 + System.currentTimeMillis());
