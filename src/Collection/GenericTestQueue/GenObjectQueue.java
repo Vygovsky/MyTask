@@ -11,11 +11,12 @@ public class GenObjectQueue<T> {
         if (head == null) {
             head = ob;
         } else {
-            tail.setObject(obj);
-            tail = ob;
-            size++;
+            tail.setNext(ob);
         }
+        tail = ob;
+        size++;
     }
+
 
     public T pull() {
         if (size == 0) {
@@ -25,11 +26,28 @@ public class GenObjectQueue<T> {
         head = head.getNext();
         if (head == null) {
             tail = null;
-            size--;
         }
+        size--;
         return obj;
     }
 
+
+    public T get(int index) {
+        if (size == 0 || index >= size || index < 0) {
+            return null;
+        }
+        ObjectBox<T> current = head;
+        int pos = 0;
+        if (pos++ < index) {
+            current = current.getNext();
+        }
+        T obj = current.getObject();
+        return obj;
+    }
+
+    public int getSize() {
+        return size;
+    }
 
     private class ObjectBox<T> {
         private T object;
