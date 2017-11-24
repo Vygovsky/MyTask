@@ -38,9 +38,10 @@ public class GenObjectQueue<T> {
         }
         ObjectBox<T> current = head;
         int pos = 0;
-        if (pos++ < index) {
+        while (pos++ < index) {
             current = current.getNext();
         }
+
         T obj = current.getObject();
         return obj;
     }
