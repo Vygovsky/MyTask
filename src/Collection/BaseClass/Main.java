@@ -28,7 +28,7 @@ public class Main {
     private static void printCollections(String title, List<? extends BaseClass> list) {
         System.out.println(title);
         for (Object mc : list) {
-            BaseClass bc =(BaseClass)mc;
+            BaseClass bc = (BaseClass) mc;
             System.out.println("Item :" + bc.getName());
         }
         System.out.println();

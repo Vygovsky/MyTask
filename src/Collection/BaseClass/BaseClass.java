@@ -1,8 +1,5 @@
 package Collection.BaseClass;
 
-/**
- * Created by Roman_v on 27.11.2017.
- */
 public class BaseClass {
     private String name;
 
