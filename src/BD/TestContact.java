@@ -3,7 +3,7 @@ package BD;
 import java.util.List;
 
 public class TestContact {
-    public static void main(String[] args) {
+    public static void maidn(String[] args) {
         ManagerContact mc = new ManagerContact();
 
         Contact c1 = new Contact("Михаил", "Троцкий", "097-165-99-48", "miha@ukr.net");
@@ -32,7 +32,7 @@ public class TestContact {
             System.out.println(con3);
         }
         System.out.println("GET CONTACT=========================");
-        Contact contact=mc.getContact(cId1);
+        Contact contact = mc.getContact(cId1);
         System.out.println(contact);
 
 

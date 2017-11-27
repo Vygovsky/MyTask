@@ -34,8 +34,9 @@ public class ContactSimpleDAO implements ContactDAO {
     @Override
     public Contact getContact(Long id) {
         for (Contact contact : contacts) {
-           if( contact.getId().equals(id));
-            return contact;
+            if (contact.getId().equals(id)) {
+                return contact;
+            }
         }
         return null;
     }
