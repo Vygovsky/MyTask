@@ -7,13 +7,20 @@ public class MyClassCompare implements Comparable<MyClassCompare> {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public int compareTo(MyClassCompare o) {
         return name.compareTo(name);
     }
 
+
     @Override
     public String toString() {
         return name;
     }
+
+
 }
