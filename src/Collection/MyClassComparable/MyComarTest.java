@@ -34,6 +34,8 @@ public class MyComarTest {
         printCollection2("Без сортироваи", list);
         list.sort(new MyClassComparator());
         printCollection2("После сортировки", list);
+        list.sort(new MyClassComparator().reversed());
+        printCollection2("После сортировка в обратном порядке", list);
     }
 
     public static void printCollection1(String title, List<MyClassCompare> list) {
