@@ -1,4 +1,4 @@
-package BD;
+package bd;
 
 public class Contact {
     private Long id;

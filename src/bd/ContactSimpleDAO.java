@@ -1,7 +1,6 @@
-package BD;
+package bd;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class ContactSimpleDAO implements ContactDAO {
