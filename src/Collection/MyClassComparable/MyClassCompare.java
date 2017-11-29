@@ -13,7 +13,7 @@ public class MyClassCompare implements Comparable<MyClassCompare> {
 
     @Override
     public int compareTo(MyClassCompare o) {
-        return name.compareTo(name);
+        return name.compareTo(o.getName());
     }
 
 
