@@ -8,7 +8,7 @@ public class TestContact {
 
         Contact c1 = new Contact("Михаил", "Троцкий", "097-165-99-48", "miha@ukr.net");
         Contact c2 = new Contact("Валера", "Крупицкия", "097-189-80-48", "Valera89@mail.ru");
-        Contact c3 = new Contact("Ирина", "Глуховская", "097-899-56-33", "IrKA75@yandex.ru");
+        Contact c3 = new Contact("Валера", "Крупицкия", "097-189-80-48", "Valera89@mail.ru");
 
         System.out.println("ADD CONTACT==========================");
         Long cId1 = mc.addContact(c1);
