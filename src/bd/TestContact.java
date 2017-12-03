@@ -3,7 +3,7 @@ package bd;
 import java.util.List;
 
 public class TestContact {
-    public static void maidn(String[] args) {
+    public static void main(String[] args) {
         ManagerContact mc = new ManagerContact();
 
         Contact c1 = new Contact("Михаил", "Троцкий", "097-165-99-48", "miha@ukr.net");
