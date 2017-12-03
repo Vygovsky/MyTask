@@ -6,6 +6,12 @@ import java.util.List;
 public class ContactSimpleDAO implements ContactDAO {
     private List<Contact> contacts = new ArrayList<>();
 
+    public ContactSimpleDAO() {
+        addContact(new Contact("Михаил", "Троцкий", "097-165-99-48", "miha@ukr.net"));
+        addContact(new Contact("Валера", "Крупицкия", "097-189-80-48", "Valera89@mail.ru"));
+        addContact(new Contact("Валера", "Крупицкия", "097-189-80-48", "Valera89@mail.ru"));
+    }
+
     @Override
     public Long addContact(Contact contact) {
         Long id = generateId();
