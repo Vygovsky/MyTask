@@ -29,11 +29,11 @@ public class CardLayoutTest extends JFrame implements ActionListener {
         button.add(last);
         last.addActionListener(this);
         button.add(next);
-        last.addActionListener(this);
+        next.addActionListener(this);
         button.add(prev);
-        last.addActionListener(this);
+        prev.addActionListener(this);
         button.add(show);
-        last.addActionListener(this);
+        show.addActionListener(this);
 
         getContentPane().add("Center", panel);
         getContentPane().add("South", button);
