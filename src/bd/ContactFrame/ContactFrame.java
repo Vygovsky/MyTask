@@ -76,6 +76,16 @@ public class ContactFrame extends JFrame implements ActionListener {
             case LOAD:
                 loadContact();
                 break;
+            case ADD:
+                addContact();
+                break;
+            case EDIT:
+                editContact;
+                break;
+            case DELETE:
+                deleteContact;
+                break;
+
         }
 
     }
