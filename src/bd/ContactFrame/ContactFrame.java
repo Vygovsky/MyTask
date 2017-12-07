@@ -71,8 +71,8 @@ public class ContactFrame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String action=e.getActionCommand();
-        switch (action){
+        String action = e.getActionCommand();
+        switch (action) {
             case LOAD:
                 loadContact();
                 break;
@@ -80,17 +80,35 @@ public class ContactFrame extends JFrame implements ActionListener {
                 addContact();
                 break;
             case EDIT:
-                editContact;
+                editContact();
                 break;
             case DELETE:
-                deleteContact;
+               // deleteContact();
                 break;
 
         }
 
     }
-    private void addContact(){
+
+    private void addContact() {
         //EditContactDialog
+
+    }
+
+    private void editContact() {
+        int st = contactTable.getSelectedRow();
+        if (st != -1) {
+            Long id = Long.parseLong(contactTable.getModel().getValueAt(st, 0).toString());
+            Contact cnt = mc.getContact(id);
+            EditContactDialog ecd = new EditContactDialog(mc.getContact(id));
+
+        }
+    }
+
+    private void saveContact(EditContactDialog ed) {
+        if (ed.isSave()){
+
+        }
 
     }
 
