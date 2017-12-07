@@ -101,7 +101,9 @@ public class ContactFrame extends JFrame implements ActionListener {
             Long id = Long.parseLong(contactTable.getModel().getValueAt(st, 0).toString());
             Contact cnt = mc.getContact(id);
             EditContactDialog ecd = new EditContactDialog(mc.getContact(id));
-
+            saveContact(ecd);
+        }else {
+            JOptionPane.showMessageDialog(this,"Вы должны выделить строку для редактирования");
         }
     }
 
