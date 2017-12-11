@@ -9,7 +9,7 @@ public class ContactSimpleDAO implements ContactDAO {
     public ContactSimpleDAO() {
         addContact(new Contact("Михаил", "Троцкий", "097-165-99-48", "miha@ukr.net"));
         addContact(new Contact("Валера", "Крупицкия", "097-189-80-48", "Valera89@mail.ru"));
-        addContact(new Contact("Валера", "Крупицкия", "097-189-80-48", "Valera89@mail.ru"));
+        addContact(new Contact("Ольга", "Миронинко", "066-996-55-41", "Olgino77@yandex.ru"));
     }
 
     @Override

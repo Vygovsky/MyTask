@@ -24,7 +24,7 @@ public class EditContactDialog extends JDialog implements ActionListener {
     private static final JTextPane txtEmail = new JTextPane();
 
     private Long contactId = null;
-    boolean save = false;
+    private boolean save = false;
 
     public EditContactDialog() {
         this(null);
@@ -40,41 +40,49 @@ public class EditContactDialog extends JDialog implements ActionListener {
         setResizable(false);
         setBounds(300,300,450,500);
         setVisible(true);
-
     }
 
     private void buildFeids() {
-        JLabel lbFirstName = new JLabel("Имя");
-        lbFirstName.setHorizontalAlignment(SwingConstants.RIGHT);
-        lbFirstName.setBounds(new Rectangle(PAD, 0 * H_B + PAD, W_L, H_B));
-        add(lbFirstName);
+        JLabel lblFirstName = new JLabel("Имя:");
+        // Выравнивание текста с правой стороны
+        lblFirstName.setHorizontalAlignment(SwingConstants.RIGHT);
+        // Выставляем координаты метки
+        lblFirstName.setBounds(new Rectangle(PAD, 0 * H_B + PAD, W_L, H_B));
+        // Кладем метку на форму
+        add(lblFirstName);
+        // Выставляем координаты поля
         txtFirstName.setBounds(new Rectangle(W_L + 2 * PAD, 0 * H_B + PAD, W_T, H_B));
+        // Делаем "бордюр" для поля
         txtFirstName.setBorder(BorderFactory.createEtchedBorder());
-        add(lbFirstName);
+        // Кладем поле на форму
+        add(txtFirstName);
 
-        JLabel lbLastName = new JLabel("Фамилия");
-        lbLastName.setHorizontalAlignment(SwingConstants.RIGHT);
-        lbLastName.setBounds(new Rectangle(PAD, 1 + H_B + PAD, W_L, H_B));
-        add(lbLastName);
+        // Набор метки и поля для Фамилии
+        JLabel lblLastName = new JLabel("Фамилия:");
+        lblLastName.setHorizontalAlignment(SwingConstants.RIGHT);
+        lblLastName.setBounds(new Rectangle(PAD, 1 * H_B + PAD, W_L, H_B));
+        add(lblLastName);
         txtLastName.setBounds(new Rectangle(W_L + 2 * PAD, 1 * H_B + PAD, W_T, H_B));
         txtLastName.setBorder(BorderFactory.createEtchedBorder());
-        add(lbLastName);
+        add(txtLastName);
 
-        JLabel lbPhone = new JLabel("Телефон");
-        lbPhone.setHorizontalAlignment(SwingConstants.RIGHT);
-        lbPhone.setBounds(new Rectangle(PAD, 2 + H_B + PAD, W_L, H_B));
-        add(lbPhone);
+        // Набор метки и поля для Телефона
+        JLabel lblPhone = new JLabel("Телефон:");
+        lblPhone.setHorizontalAlignment(SwingConstants.RIGHT);
+        lblPhone.setBounds(new Rectangle(PAD, 2 * H_B + PAD, W_L, H_B));
+        add(lblPhone);
         txtPhone.setBounds(new Rectangle(W_L + 2 * PAD, 2 * H_B + PAD, W_T, H_B));
         txtPhone.setBorder(BorderFactory.createEtchedBorder());
-        add(lbPhone);
+        add(txtPhone);
 
-        JLabel lbEmail = new JLabel("Почта");
-        lbEmail.setHorizontalAlignment(SwingConstants.RIGHT);
-        lbEmail.setBounds(new Rectangle(PAD, 3 + H_B + PAD, W_L, H_B));
-        add(lbEmail);
+        // Набор метки и поля для Email
+        JLabel lblEmail = new JLabel("Email:");
+        lblEmail.setHorizontalAlignment(SwingConstants.RIGHT);
+        lblEmail.setBounds(new Rectangle(PAD, 3 * H_B + PAD, W_L, H_B));
+        add(lblEmail);
         txtEmail.setBounds(new Rectangle(W_L + 2 * PAD, 3 * H_B + PAD, W_T, H_B));
         txtEmail.setBorder(BorderFactory.createEtchedBorder());
-        add(lbEmail);
+        add(txtEmail);
     }
 
     private void buildButtons() {
@@ -96,7 +104,7 @@ public class EditContactDialog extends JDialog implements ActionListener {
             contactId = contact.getId();
             txtFirstName.setText(contact.getName());
             txtLastName.setText(contact.getLastName());
-            txtPhone.setText(contact.getPhone());
+            txtEmail.setText(contact.getMail());
             txtPhone.setText(contact.getPhone());
         }
     }
