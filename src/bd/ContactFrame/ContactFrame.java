@@ -83,15 +83,25 @@ public class ContactFrame extends JFrame implements ActionListener {
                 editContact();
                 break;
             case DELETE:
-               // deleteContact();
+                deleteContact();
                 break;
-
         }
+    }
 
+    private void deleteContact() {
+        int sr = contactTable.getSelectedRow();
+        if (sr != -1) {
+            Long id = Long.parseLong(contactTable.getModel().getValueAt(sr, 0).toString());
+            mc.deleteContact(id);
+            loadContact();
+        } else {
+            JOptionPane.showMessageDialog(this, "Вы должны выделить строку для редактирования");
+        }
     }
 
     private void addContact() {
-        //EditContactDialog
+        EditContactDialog ecd = new EditContactDialog();
+        saveContact(ecd);
 
     }
 
@@ -102,16 +112,20 @@ public class ContactFrame extends JFrame implements ActionListener {
             Contact cnt = mc.getContact(id);
             EditContactDialog ecd = new EditContactDialog(mc.getContact(id));
             saveContact(ecd);
-        }else {
-            JOptionPane.showMessageDialog(this,"Вы должны выделить строку для редактирования");
+        } else {
+            JOptionPane.showMessageDialog(this, "Вы должны выделить строку для редактирования");
         }
     }
 
     private void saveContact(EditContactDialog ed) {
-        if (ed.isSave()){
-
+        if (ed.isSave()) {
+            Contact cn = ed.getContact();
+            if (cn.getId() != null) {
+                mc.updateContact(cn);
+            } else {
+                mc.addContact(cn);
+            }
         }
-
+        loadContact();
     }
-
 }
