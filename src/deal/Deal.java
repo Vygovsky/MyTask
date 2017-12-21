@@ -8,14 +8,10 @@ public class Deal {
     private Party seller;
     private Product[] products;
 
-    public Deal(String buyer, String seller, String products) {
+    public Deal(Party buyer, Party seller, Product[] products) {
         this.buyer = buyer;
         this.seller = seller;
         this.products = products;
-    }
-
-    public double getSum(double sum) {
-        return sum;
     }
 
     public Date getDate() {
