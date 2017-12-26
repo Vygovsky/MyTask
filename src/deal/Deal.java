@@ -62,13 +62,4 @@ public class Deal {
         return result;
     }
 
-    @Override
-    public String toString() {
-        return "Deal{" +
-                "date=" + date +
-                ", buyer=" + buyer +
-                ", seller=" + seller +
-                ", products=" + Arrays.toString(products) +
-                '}';
-    }
 }
