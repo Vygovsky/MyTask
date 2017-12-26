@@ -34,7 +34,7 @@ public class Deal {
     public double getSum() {
         double res = 0;
         for (Product product : products) {
-            res = product.getCost();
+             res = product.getCost();
         }
         return res;
     }

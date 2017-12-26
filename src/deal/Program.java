@@ -36,7 +36,8 @@ public class Program {
         printInfo(products);
 
         deal[0] = new Deal(buyer, seller, products);
-        deal[0].getSum();
+        double sum = deal[0].getSum();
+        System.out.println(sum);
 
 
 
