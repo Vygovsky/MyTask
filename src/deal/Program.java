@@ -6,7 +6,7 @@ public class Program {
     public static void main(String[] args) {
         Date date = new Date();
 
-        Deal[] deal = new Deal[5];
+        Deal[] deal = new Deal[1];
 
         Party buyer = new Party();
         buyer.setName("Sergey");
@@ -14,7 +14,7 @@ public class Program {
         Party seller = new Party();
         seller.setName("Target");
 
-        Product[] products = new Product[5];
+        Product[] products = new Product[1];
         products[0] = new Product();
 
         products[0].setTitle("масло Олейна");
@@ -37,14 +37,12 @@ public class Program {
 
         deal[0] = new Deal(buyer, seller, products);
         double sum = deal[0].getSum();
-        System.out.println(sum);
-
-
+        System.out.println("Общая стоимоть покупок: " + sum + " "+date);
 
     }
 
     public static void printInfo(Product[] products) {
-        System.out.println(products[0].getTitle("Почему так? ") + products[0].getQuantity() + "шт " + "цена: " + products[0].getPrice());
+        System.out.println(products[0].getTitle() + " " + "1шт x" + products[0].getQuantity() + " цена: " + products[0].getPrice() + " = " + products[0].getCost());
 
 
     }

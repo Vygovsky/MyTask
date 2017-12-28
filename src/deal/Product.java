@@ -6,7 +6,7 @@ public class Product {
     private int quantity;
 
 
-    public String getTitle(String title) {
+    public String getTitle() {
         return title;
     }
 
