@@ -34,4 +34,8 @@ public class Product {
         return price * quantity;
     }
 
+    @Override
+    public String toString() {
+        return title + " 1шт " + price + "грн x" + quantity + " =" + getCost() + " грн";
+    }
 }

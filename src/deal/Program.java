@@ -14,37 +14,42 @@ public class Program {
         Party seller = new Party();
         seller.setName("Target");
 
-        Product[] products = new Product[3];
+        Product[] products = new Product[1];
         products[0] = new Product();
 
         products[0].setTitle("масло Олейна");
         products[0].setQuantity(5);
         products[0].setPrice(20);
-     //   double res = products[0].getCost();
+        //   double res = products[0].getCost();
         printInfo(products);
 
-        products[1]=new Product();
-        products[1].setTitle("пиво Опелля");
-        products[1].setQuantity(2);
-        products[1].setPrice(14.56);
-       // double res1 = products[0].getCost();
+        products[0] = new Product();
+        products[0].setTitle("пиво Опелля");
+        products[0].setQuantity(2);
+        products[0].setPrice(14.56);
+        // double res1 = products[0].getCost();
         printInfo(products);
 
-        products[2]=new Product();
-        products[2].setTitle("шоколад Аленка");
-        products[2].setQuantity(3);
-        products[2].setPrice(18);
-       // double res2 = products[0].getCost();
+        products[0] = new Product();
+        products[0].setTitle("шоколад Аленка");
+        products[0].setQuantity(3);
+        products[0].setPrice(18);
+        // double res2 = products[0].getCost();
         printInfo(products);
 
         deal[0] = new Deal(buyer, seller, products);
         double sum = deal[0].getSum();
-        System.out.println("Общая стоимоть покупок: " + sum + " "+date);
+        System.out.println("Общая стоимоть покупок: " + sum + " " + date);
 
     }
 
     public static void printInfo(Product[] products) {
-     //   System.out.println(products[].getTitle() + " " + "1шт x" + products[0].getQuantity() + " цена: " + products[0].getPrice() + " = " + products[0].getCost());
+        for (Product product : products) {
+            System.out.println(product);
+
+        }
+
+        //   System.out.println(products[].getTitle() + " " + "1шт x" + products[0].getQuantity() + " цена: " + products[0].getPrice() + " = " + products[0].getCost());
 
 
     }
