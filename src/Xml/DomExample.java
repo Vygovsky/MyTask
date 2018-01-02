@@ -16,19 +16,25 @@ import java.io.IOException;
 public class DomExample {
     public static void main(String[] args) throws IOException, SAXException {
         try {
+            // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse("E:\\uits\\MyTask\\src\\BookCatalog.xml");
+            // Создается дерево DOM документа из файла
+            Document document = documentBuilder.parse("BookCatalog.xml");
 
+            // Получаем корневой элемент
             Node root = document.getDocumentElement();
             System.out.println("List of books");
             System.out.println("*************************");
+            // Просматриваем все подэлементы корневого - т.е. книги
             NodeList books = root.getChildNodes();
             for (int i = 0; i < books.getLength(); i++) {
                 Node book = books.item(i);
+                // Если нода не текст, то это книга - заходим внутрь
                 if (book.getNodeType() != Node.TEXT_NODE) {
                     NodeList bookProps = book.getChildNodes();
                     for (int j = 0; j < bookProps.getLength(); j++) {
                         Node bookProp = bookProps.item(j);
+                        // Если нода не текст, то это один из параметров книги - печатаем
                         if (bookProp.getNodeType() != Node.TEXT_NODE) {
                             System.out.println(bookProp.getNodeName() + ":" + bookProp.getTextContent());
                         }
