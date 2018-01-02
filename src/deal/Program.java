@@ -44,7 +44,7 @@ public class Program {
     }
 
     public static void printInfo(Product[] products) {
-        System.out.println(products[].getTitle() + " " + "1шт x" + products[0].getQuantity() + " цена: " + products[0].getPrice() + " = " + products[0].getCost());
+     //   System.out.println(products[].getTitle() + " " + "1шт x" + products[0].getQuantity() + " цена: " + products[0].getPrice() + " = " + products[0].getCost());
 
 
     }
