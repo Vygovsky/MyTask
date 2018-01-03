@@ -18,6 +18,7 @@ public class DomExample {
         try {
             // Создается построитель документа
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+
             // Создается дерево DOM документа из файла
             Document document = documentBuilder.parse("BookCatalog.xml");
 

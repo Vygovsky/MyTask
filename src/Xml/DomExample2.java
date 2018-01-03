@@ -61,6 +61,7 @@ public class DomExample2 {
         book.appendChild(cost);
 
         root.appendChild(book);
+
         writeDocument(document);
 
     }
