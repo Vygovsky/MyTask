@@ -19,7 +19,7 @@ public class DomExample2 {
     public static void main(String[] args) throws TransformerConfigurationException {
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse("BookCatalog.xml");
+            Document document = documentBuilder.parse("E:\\uits\\MyTask\\src\\BookCatalog.xml");
 
             addElement(document);
 
