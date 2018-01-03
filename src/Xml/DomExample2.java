@@ -19,7 +19,7 @@ public class DomExample2 {
     public static void main(String[] args) throws TransformerConfigurationException {
         try {
             DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document document = documentBuilder.parse("E:\\uits\\MyTask\\src\\BookCatalog.xml");
+            Document document = documentBuilder.parse("BookCatalog.xml");
 
             addElement(document);
 
@@ -58,6 +58,7 @@ public class DomExample2 {
         book.appendChild(author);
         book.appendChild(date);
         book.appendChild(isbn);
+        book.appendChild(publish);
         book.appendChild(cost);
 
         root.appendChild(book);
@@ -70,7 +71,7 @@ public class DomExample2 {
         try {
             Transformer tr = TransformerFactory.newInstance().newTransformer();
             DOMSource domSource=new DOMSource(document);
-            FileOutputStream fos=new FileOutputStream("Other.xml");
+            FileOutputStream fos=new FileOutputStream("BookCatalog.xml");
             StreamResult result=new StreamResult(fos);
             tr.transform(domSource,result);
         }catch (TransformerException|IOException e){

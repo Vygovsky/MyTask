@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BookCatalog>
+    <Book>
+        <Title>Kobzar</Title>
+        <Author>Taras Shevchenko</Author>
+        <Data>1954</Data>
+        <ISBN>08933657</ISBN>
+        <Publish>History Ukraine</Publish>
+        <Cost currency="GRN">75.55</Cost>
+    </Book>
+    <Book>
+        <Title>War and Peace</Title>
+        <Author>Lev Tolstoy</Author>
+        <Data>1873</Data>
+        <ISBN>789247200</ISBN>
+        <Publish>History Russia</Publish>
+        <Cost currency="RUB">15880</Cost>
+    </Book>
+    <Book>
+        <Title>Java для чайников или как создать ИИ?</Title>
+        <Author>Сергей Петрыкин</Author>
+        <Date>2019</Date>
+        <ISBN>009-668-88</ISBN>
+        <Cost>1500</Cost>
+    </Book>
+    <Book>
+        <Title>Java для чайников или как создать ИИ?</Title>
+        <Author>Сергей Петрыкин</Author>
+        <Date>2019</Date>
+        <ISBN>009-668-88</ISBN>
+        <Publish>Java-Course publisher</Publish>
+        <Cost>1500</Cost>
+    </Book>
+</BookCatalog>
