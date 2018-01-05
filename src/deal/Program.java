@@ -14,7 +14,7 @@ public class Program {
         Party seller = new Party();
         seller.setName("Target");
 
-        Product[] products = new Product[1];
+        Product[] products = new Product[3];
         products[0] = new Product();
 
         products[0].setTitle("масло Олейна");
@@ -23,17 +23,17 @@ public class Program {
         //   double res = products[0].getCost();
         printInfo(products);
 
-        products[0] = new Product();
-        products[0].setTitle("пиво Опелля");
-        products[0].setQuantity(2);
-        products[0].setPrice(14.56);
+        products[1] = new Product();
+        products[1].setTitle("пиво Опелля");
+        products[1].setQuantity(2);
+        products[1].setPrice(14.56);
         // double res1 = products[0].getCost();
         printInfo(products);
 
-        products[0] = new Product();
-        products[0].setTitle("шоколад Аленка");
-        products[0].setQuantity(3);
-        products[0].setPrice(18);
+        products[2] = new Product();
+        products[2].setTitle("шоколад Аленка");
+        products[2].setQuantity(3);
+        products[2].setPrice(18);
         // double res2 = products[0].getCost();
         printInfo(products);
 
