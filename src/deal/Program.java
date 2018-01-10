@@ -1,12 +1,14 @@
 package deal;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
         Date date = new Date();
 
         Deal[] deal = new Deal[1];
+        String bayer=keyboard("bayer");
 
         Party buyer = new Party();
         buyer.setName("Sergey");
@@ -20,21 +22,18 @@ public class Program {
         products[0].setTitle("масло Олейна");
         products[0].setQuantity(5);
         products[0].setPrice(20);
-        //   double res = products[0].getCost();
-        printInfo(products);
+
 
         products[1] = new Product();
         products[1].setTitle("пиво Опелля");
         products[1].setQuantity(2);
         products[1].setPrice(14.56);
-        // double res1 = products[0].getCost();
-        printInfo(products);
+
 
         products[2] = new Product();
         products[2].setTitle("шоколад Аленка");
         products[2].setQuantity(3);
         products[2].setPrice(18);
-        // double res2 = products[0].getCost();
         printInfo(products);
 
         deal[0] = new Deal(buyer, seller, products);
@@ -48,9 +47,13 @@ public class Program {
             System.out.println(product);
 
         }
+    }
 
-        //   System.out.println(products[].getTitle() + " " + "1шт x" + products[0].getQuantity() + " цена: " + products[0].getPrice() + " = " + products[0].getCost());
-
-
+    public static String keyboard(String message) {
+        System.out.println(message+": ");
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        sc.close();
+        return str;
     }
 }
