@@ -67,5 +67,6 @@ public class Program2 {
         inputDeal();
 
 
+
     }
 }
