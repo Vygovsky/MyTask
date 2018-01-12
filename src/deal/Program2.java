@@ -31,8 +31,12 @@ public class Program2 {
         Deal deal = new Deal(bayer, seller, products);
         return deal;
     }
-    public void input(){
 
+    public void input() {
+        deals = new Deal[maxDeal];
+        for (int i = 0; i < deals.length; i++) {
+            deals[i] = inputDeal();
+        }
     }
 
     private static Party inputParty() {
@@ -60,7 +64,7 @@ public class Program2 {
     }
 
     public static void main(String[] args) {
-    inputDeal();
+        inputDeal();
 
 
     }
