@@ -8,7 +8,7 @@ public class Program {
         Date date = new Date();
 
         Deal[] deal = new Deal[1];
-        String bayer=keyboard("bayer");
+  //      String bayer=keyboard("bayer");
 
         Party buyer = new Party();
         buyer.setName("Sergey");
@@ -45,15 +45,14 @@ public class Program {
     public static void printInfo(Product[] products) {
         for (Product product : products) {
             System.out.println(product);
-
         }
     }
 
-    public static String keyboard(String message) {
+  /*  public static String keyboard(String message) {
         System.out.println(message+": ");
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         sc.close();
         return str;
-    }
+    }*/
 }

@@ -38,4 +38,5 @@ public class Product {
     public String toString() {
         return title + " 1шт " + price + "грн x" + quantity + " =" + getCost() + " грн";
     }
+
 }
