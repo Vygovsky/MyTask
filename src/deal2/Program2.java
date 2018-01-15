@@ -17,7 +17,7 @@ public class Program2 {
         return sc.next();
     }
 
-  /*  private Deal inputDeal() {
+   /* private Deal inputDeal() {
         System.out.println("Input dael: ");
 
         System.out.println("Seller");
@@ -33,8 +33,7 @@ public class Program2 {
         Deal deal = new Deal(bayer, seller, products);
         return deal;
     }
-*/
-  /*  public void input() {
+    public void input() {
         deals = new Deal[maxDeal];
         for (int i = 0; i < deals.length; i++) {
             deals[i] = inputDeal();
@@ -70,7 +69,7 @@ public class Program2 {
         return sum;
     }
 
-  /*  public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Program2 pr = new Program2();
         Deal deal = pr.inputDeal();
         pr.printInfo(deal);
