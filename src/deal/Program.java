@@ -1,7 +1,6 @@
 package deal;
 
 import java.util.Date;
-import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
@@ -22,7 +21,7 @@ public class Program {
         products[0].setTitle("масло Олейна");
         products[0].setQuantity(5);
         products[0].setPrice(20);
-
+        printInfo(products);
 
         products[1] = new Product();
         products[1].setTitle("пиво Опелля");

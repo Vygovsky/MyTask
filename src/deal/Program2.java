@@ -1,21 +1,24 @@
 package deal;
 
+import java.util.Date;
 import java.util.Scanner;
 
+
 public class Program2 {
+    Date date = new Date();
     int maxDeal = 2;
-    static int maxProd = 2;
+    int maxProd = 2;
 
     private Deal[] deals;
 
 
-    private static String keyboard(String message) {
+    private String keyboard(String message) {
         System.out.println(message + ": ");
         Scanner sc = new Scanner(System.in);
         return sc.next();
     }
 
-    private static Deal inputDeal() {
+    private Deal inputDeal() {
         System.out.println("Input dael: ");
 
         System.out.println("Seller");
@@ -39,14 +42,14 @@ public class Program2 {
         }
     }
 
-    private static Party inputParty() {
+    private Party inputParty() {
         String partyName = keyboard("Input Party");
         Party party = new Party();
         party.setName(partyName);
         return party;
     }
 
-    private static Product inputProduct() {
+    private Product inputProduct() {
         String title = keyboard("Title ");
         String price = keyboard("Price ");
         String quantity = keyboard("Quantity ");
@@ -57,15 +60,21 @@ public class Program2 {
         return product;
     }
 
-    public static void printInfo(Product[] products) {
-        for (Product product : products) {
+    public void printInfo(Deal deal) {
+        for (Product product : deal.getProducts()) {
             System.out.println(product);
         }
+        System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
+    }
+    public double totalSum(Deal deal){
+        double sum = deal.getSum();
+        return sum;
     }
 
     public static void main(String[] args) {
-        inputDeal();
-
+        Program2 pr = new Program2();
+        Deal deal = pr.inputDeal();
+        pr.printInfo(deal);
 
 
     }
