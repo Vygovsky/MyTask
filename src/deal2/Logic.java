@@ -10,6 +10,10 @@ public class Logic {
     private List<Deal> deals = new ArrayList<>();
     private Date date = new Date();
 
+    public void setDeals(List<Deal> deals) {
+        this.deals = deals;
+    }
+
     private Scanner sc = new Scanner(System.in);
 
     protected boolean isNewDeal() {
@@ -72,16 +76,19 @@ public class Logic {
                     Product product = inputProduct();
                     products.add(product);
                     deals.add(deal);
-                    printInfoProduct();
+                    printInfoProduct(deals.get(deals.size() - 1));
+                    break;
                 case "N":
                     getSum(deal);
+                    System.out.println("===========================");
+                    isNewDeal();
                 default:
-                    //isNewDeal();
+                    System.exit(0);
             }
         }
     }
 
-    public void printInfoProduct() {
+    public void printInfoProduct(Deal deal) {
         for (Product product : products) {
             System.out.println(product);
         }
@@ -90,10 +97,10 @@ public class Logic {
 
     public double totalSum(Deal deal) {
         double sum = deal.getSum();
-        return  sum;
-    }
-    public void getSum(Deal deal){
-        System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
+        return sum;
     }
 
+    public void getSum(Deal deal) {
+        System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
+    }
 }
