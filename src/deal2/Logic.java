@@ -10,10 +10,6 @@ public class Logic {
     private List<Deal> deals = new ArrayList<>();
     private Date date = new Date();
 
-    public void setDeals(List<Deal> deals) {
-        this.deals = deals;
-    }
-
     private Scanner sc = new Scanner(System.in);
 
     protected boolean isNewDeal() {
@@ -24,7 +20,6 @@ public class Logic {
                     return true;
                 case "N":
                     System.exit(0);
-
             }
         }
     }
