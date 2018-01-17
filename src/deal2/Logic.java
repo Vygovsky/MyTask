@@ -72,23 +72,28 @@ public class Logic {
                     Product product = inputProduct();
                     products.add(product);
                     deals.add(deal);
+                    printInfoProduct();
                 case "N":
-                    printInfoProduct(deals.get(deals.size() - 1));
+                    getSum(deal);
                 default:
-                    isNewDeal();
+                    //isNewDeal();
             }
         }
     }
 
-    public void printInfoProduct(Deal deal) {
+    public void printInfoProduct() {
         for (Product product : products) {
             System.out.println(product);
         }
-       // System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
+        // System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
     }
 
     public double totalSum(Deal deal) {
         double sum = deal.getSum();
-        return sum;
+        return  sum;
     }
+    public void getSum(Deal deal){
+        System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
+    }
+
 }
