@@ -5,7 +5,7 @@ public class Program {
         Logic logic=new Logic();
 
         logic.isNewDeal();
-        logic.createParty();
+       // logic.createParty();
         logic.addsProducts();
 
 

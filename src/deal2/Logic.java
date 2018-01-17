@@ -26,7 +26,21 @@ public class Logic {
     }
 
     public Party createParty() {
-        System.out.println("Введите ваше имя:");
+        System.out.print("Введите ваше имя: ");
+        Party bayer = new Party();
+        bayer.setName(sc.next());
+        return bayer;
+    }
+
+    public Party createPartyBuyer() {
+        System.out.print("Введите ваше имя: ");
+        Party bayer = new Party();
+        bayer.setName(sc.next());
+        return bayer;
+    }
+
+    public Party createPartySeller() {
+        System.out.print("Имя продавца: ");
         Party bayer = new Party();
         bayer.setName(sc.next());
         return bayer;
@@ -50,16 +64,18 @@ public class Logic {
     }
 
     public void addsProducts() {
+        Deal deal = new Deal(createParty(), products);
         while (true) {
             System.out.println("Добавить продукт Y или N");
             switch (sc.next()) {
                 case "Y":
                     Product product = inputProduct();
                     products.add(product);
+                    deals.add(deal);
                 case "N":
-        //            deals = printInfoProduct();
+                    printInfoProduct(deals.get(deals.size() - 1));
                 default:
-                    break;
+                    isNewDeal();
             }
         }
     }
@@ -68,7 +84,7 @@ public class Logic {
         for (Product product : products) {
             System.out.println(product);
         }
-        System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
+       // System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
     }
 
     public double totalSum(Deal deal) {

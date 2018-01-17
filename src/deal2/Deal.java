@@ -9,9 +9,11 @@ public class Deal {
     private Party seller;
     private List<Product> products;
 
-    public Deal(Party buyer, Party seller, List<Product> products) {
+  /*  public Deal() {
+    }*/
+    public Deal(Party buyer, List<Product> products) {
         this.buyer = buyer;
-        this.seller = seller;
+      //  this.seller = seller;
         this.products = products;
     }
 
