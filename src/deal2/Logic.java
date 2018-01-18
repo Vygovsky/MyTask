@@ -31,20 +31,6 @@ public class Logic {
         return bayer;
     }
 
-    public Party createPartyBuyer() {
-        System.out.print("Введите ваше имя: ");
-        Party bayer = new Party();
-        bayer.setName(sc.next());
-        return bayer;
-    }
-
-    public Party createPartySeller() {
-        System.out.print("Имя продавца: ");
-        Party bayer = new Party();
-        bayer.setName(sc.next());
-        return bayer;
-    }
-
     private Product inputProduct() {
         String title = keyboard("Title ");
         String price = keyboard("Price ");
@@ -70,10 +56,11 @@ public class Logic {
                 case "Y":
                     Product product = inputProduct();
                     products.add(product);
-                    deals.add(deal);
-                    printInfoProduct(deals.get(deals.size() - 1));
                     break;
                 case "N":
+                    deal.setProducts(products);
+                    deals.add(deal);
+                    printInfoProduct(deals.get(deals.size() - 1));
                     getSum(deal);
                     System.out.println("===========================");
                     isNewDeal();

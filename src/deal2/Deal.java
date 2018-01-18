@@ -41,4 +41,7 @@ public class Deal {
         return res;
     }
 
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
 }
