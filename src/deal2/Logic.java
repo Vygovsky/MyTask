@@ -64,6 +64,7 @@ public class Logic {
                     getSum(deal);
                     System.out.println("===========================");
                     isNewDeal();
+                    break;
                 default:
                     System.exit(0);
             }
