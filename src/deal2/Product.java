@@ -1,6 +1,8 @@
 package deal2;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private String title;
     private double price;
     private int quantity;

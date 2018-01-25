@@ -1,9 +1,10 @@
 package deal2;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Deal {
+public class Deal implements Serializable{
     private Date date = new Date();
     private Party buyer;
     private Party seller;

@@ -1,5 +1,9 @@
 package deal2;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,6 +15,9 @@ public class Logic {
     private Date date = new Date();
 
     private Scanner sc = new Scanner(System.in);
+
+    public Logic() throws IOException {
+    }
 
     protected boolean isNewDeal() {
         while (true) {
@@ -86,4 +93,14 @@ public class Logic {
     public void getSum(Deal deal) {
         System.out.println("Общая стоимоть покупок: " + totalSum(deal) + " " + date);
     }
+
+    public void serialize(String fileName) {
+        try (FileOutputStream fs = new FileOutputStream(fileName);
+             ObjectOutputStream os = new ObjectOutputStream(fs)) {
+            os.writeObject(deals);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
 }
+
