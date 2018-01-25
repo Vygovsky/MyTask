@@ -16,9 +16,7 @@ public class Test3 {
             res = N * i;
             System.out.printf("%d x %d = %d%n", N, i, res);
             i++;
-
         }
-
     }
 }
 

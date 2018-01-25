@@ -15,7 +15,6 @@ public class Test2 {
             System.out.printf("%-10s%03d%n",s1,x);
         }
         System.out.println("================================");
-
     }
 }
 
