@@ -14,17 +14,20 @@ public class Test4 {
             int a = in.nextInt();
             int b = in.nextInt();
             int n = in.nextInt();
-            res = a + b;
+            /*  int a=5; int b=3; int n=5;
+               S1=5+1*3=8;
+               S2=5+1*3+2*3=14;
+               S3=5+1*3+2*3+4*3=26;
+               ....
+            * */
+            res = a;
             for (int j = 0; j < n; j++) {
-                int x = 2 ^ j * b;
-                res+=x;
-
-
+                int x = (int) Math.pow(2, j) * b;
+                res += x;
                 System.out.print(res + " ");
             }
             System.out.println();
         }
-
         in.close();
     }
 }
