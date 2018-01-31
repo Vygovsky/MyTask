@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PHONEBOOK>
     <PERSON>
-        <NAME>Joe Wang</NAME>
+        <NAME><NO_NAME>NO_NAME</NO_NAME>Joe Wang</NAME>
         <EMAIL>joe@yourserver.com</EMAIL>
         <TELEPHONE>202-999-9999</TELEPHONE>
         <WEB>www.java2s.com</WEB>
