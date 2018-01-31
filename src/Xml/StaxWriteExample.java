@@ -16,7 +16,7 @@ public class StaxWriteExample {
             XMLStreamWriter writer = output.createXMLStreamWriter(new FileWriter("result.xml"));
 
             writer.writeStartDocument("1.0");
-            writer.writeStartDocument("BookCatalogue");
+            writer.writeStartElement("BookCatalogue");
 
             for (int i = 0; i < 5; i++) {
                 writer.writeStartElement("Book");
@@ -49,7 +49,7 @@ public class StaxWriteExample {
                 writer.writeStartElement("Cost");
                 writer.writeAttribute("Currency ", "USD");
                 writer.writeCharacters(" " + (i + 10));
-                writer.writeEndElement();
+               writer.writeEndDocument();
 
                 writer.writeEndElement();
             }
