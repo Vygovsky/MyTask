@@ -23,33 +23,33 @@ public class StaxWriteExample {
                 //Title
                 writer.writeStartElement("Title");
                 writer.writeCharacters("Book #" + i);
-                writer.writeEndDocument();
+                writer.writeEndElement();;
 
                 //Author
                 writer.writeStartElement("Author");
                 writer.writeCharacters("Author #" + i);
-                writer.writeEndDocument();
+                writer.writeEndElement();
 
                 //Date
                 writer.writeStartElement("Date");
                 writer.writeCharacters(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-                writer.writeEndDocument();
+                writer.writeEndElement();
 
                 //Isbn
                 writer.writeStartElement("ISBN");
                 writer.writeCharacters("ISBN #" + i);
-                writer.writeEndDocument();
+                writer.writeEndElement();
 
                 //Publish
                 writer.writeStartElement("Publisher");
                 writer.writeCharacters("Publisher #" + i);
-                writer.writeEndDocument();
+                writer.writeEndElement();
 
                 //Currency
                 writer.writeStartElement("Cost");
                 writer.writeAttribute("Currency ", "USD");
                 writer.writeCharacters(" " + (i + 10));
-               writer.writeEndDocument();
+                writer.writeEndElement();
 
                 writer.writeEndElement();
             }
