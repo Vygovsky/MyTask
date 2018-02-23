@@ -15,7 +15,6 @@ public class Car {
         setSetSpeed(newSpeed);
         showSpeed();
     }
-
     public void setSetSpeed(int speed) {
         showSpeed();
         speed=speed;
