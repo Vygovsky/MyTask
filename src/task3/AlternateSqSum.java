@@ -14,7 +14,8 @@ public class AlternateSqSum {
                 sum += arr[i];
             }
         }
-        return sum;
+        System.out.println(sum);
+        return new int[]{sum};
     }
 
     public static void main(String[] args) {
