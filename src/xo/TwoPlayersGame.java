@@ -3,7 +3,7 @@ package xo;
 /**
  * Created by Roman_v on 15.02.2018.
  */
-public class TwoPlayersGame {
+public class TwoPlayersGame extends Game{
     private String onePlayer;
     private String twoPlayer;
 
