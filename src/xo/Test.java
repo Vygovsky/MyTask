@@ -1,11 +1,25 @@
 package xo;
 
+import xo.controller.Game;
+import xo.view.AdvConsoleView;
+import xo.view.ConsoleView;
+
 /**
  * Created by Roman_v on 15.02.2018.
  */
 public class Test {
     public static void main(String[] args) {
-        Board board = new Board();
+        Game game = new Game();
+        ConsoleView consoleView=new ConsoleView(game);
+        AdvConsoleView advConsoleView = new AdvConsoleView(game);
+        startGame(advConsoleView);
+    }
+
+    private static void startGame(ConsoleView advConsoleView) {
+        advConsoleView.showGameName();
+    }
+}
+/* Board board = new Board();
         Game game = new Game();
         game.printGame();
         TwoPlayersGame game1 = new TwoPlayersGame("Roman", "Max");
@@ -24,6 +38,4 @@ public class Test {
 
     private static void printGameAndBoard(Board board, Game game) {
         game.printGame();
-        board.printBoard();
-    }
-}
+        board.printBoard();*/
