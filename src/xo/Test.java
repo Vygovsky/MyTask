@@ -19,7 +19,7 @@ public class Test {
         game2.printTwoPlayerName();
         game2.printThreePlayersGame();
         game2.printGame();
-        printGameAndBoard(board, game);
+        printGameAndBoard(board,game1);
     }
 
     private static void printGameAndBoard(Board board, Game game) {
