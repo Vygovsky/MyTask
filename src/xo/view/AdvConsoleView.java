@@ -5,7 +5,7 @@ import xo.controller.Game;
 public class AdvConsoleView extends ConsoleView {
 
 
-    public AdvConsoleView(Game game, Game game1) {
+    public AdvConsoleView(Game game) {
         super(game);
     }
 
