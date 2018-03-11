@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class LotteryDrawning {
+public class LotteryDrawing {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Сколько чисел нужно угадать в лотерейном билете?");
