@@ -9,8 +9,10 @@ public class TestAnimal {
         Animal animal2 = new Dog("Реск", 2);
         animal.voice();
         animal2.voice();
-
-
+        System.out.println(Animal.getCount() +" - животных было создано из класса Animal.");
 
     }
+
+
 }
+

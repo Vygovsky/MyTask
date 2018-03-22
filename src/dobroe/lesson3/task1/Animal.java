@@ -1,15 +1,19 @@
 package dobroe.lesson3.task1;
 
-/**
- * Created by Roman_v on 21.03.2018.
- */
+
 public class Animal {
     private String name;
     private int age;
+    private static int count;
 
     public Animal(String name, int age) {
         this.name = name;
         this.age = age;
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     public void voice(){
