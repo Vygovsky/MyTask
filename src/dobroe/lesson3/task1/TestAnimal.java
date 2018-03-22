@@ -10,9 +10,6 @@ public class TestAnimal {
         animal.voice();
         animal2.voice();
         System.out.println(Animal.getCount() +" - животных было создано из класса Animal.");
-
     }
-
-
 }
 
