@@ -8,9 +8,9 @@ public class Compoundlnterest {
 
         // установить процентные ставки 10 . . . 15%
         double[] interestRate = new double[NRATE];
-        for (int i = 0; i < interestRate.length; i++)
-            interestRate[i] = (STARTRATE + i) / 100;
-
+        for (int i = 0; i < interestRate.length; i++) {
+            interestRate[i] = (STARTRATE + i) / 100.0;
+        }
         // установить исходные остатки на счету равными 10000
         double[][] balance = new double[NYEAR][NRATE];
         for (int j = 0; j < balance[0].length; j++)
@@ -23,7 +23,7 @@ public class Compoundlnterest {
                 // получить остатки на счету за прошлый год
                 double oldBalance = balance[k - 1][l];
                 // рассчитать проценты
-                double interest = oldBalance * interestRate[i];
+                double interest = oldBalance * interestRate[l];
                 // рассчитать остатки на счету в текущем году
                 balance[k][l] = interest + oldBalance;
             }
@@ -31,7 +31,7 @@ public class Compoundlnterest {
 
         // вывести один ряд процентных ставок
         for (int k = 0; k < interestRate.length; k++)
-            System.out.printf("%9.0f%%", 100 * interestRate[i]);
+            System.out.printf("%9.0f%%", 100 * interestRate[k]);
 
         System.out.println();
         // вывести таблицу остатков на счету
