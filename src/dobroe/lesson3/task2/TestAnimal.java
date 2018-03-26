@@ -21,15 +21,4 @@ public class TestAnimal {
                     "относится к " + "классу " + animal.toString());
         }
     }
-
-    /*public static Animal[] print(Animal[] animals) {
-        for (int i = 0; i <animals.length ; i++) {
-            if(animals)
-        }
-
-
-        return animals;*/
-    }
-
-//}
-
+}
