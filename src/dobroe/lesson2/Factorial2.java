@@ -8,18 +8,19 @@ public class Factorial2 {
 
     public static int findFactorial(int number) {
         int resultFactorial = 0;
-
-        negativeFactorial(number);
-
-        for (int i = 2; i <= number; i++) {
-            resultFactorial *= i;
+        if (number < 0) {
+            negativeFactorial(number);
+        } else {
+            for (int i = 2; i <= number; i++) {
+                resultFactorial *= i;
+            }
         }
         return resultFactorial;
     }
 
     public static void negativeFactorial(int number) {
         if (number < 0) {
-            System.out.println("number < 0 не может быть");
+            System.out.println("Ошибка! number не может быть < 0");
         }
     }
 }
