@@ -5,6 +5,7 @@ package dobroe.lesson3.task2;
  */
 public class TestAnimal {
     public static void main(String[] args) {
+
         Animal[] animal = {
                 new Cat("Мурзик", 5),
                 new Dog("Тузик", 12),
@@ -22,3 +23,4 @@ public class TestAnimal {
         }
     }
 }
+
