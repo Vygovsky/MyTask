@@ -1,9 +1,8 @@
 package dobroe.lesson3.task3;
 
-/**
- * Created by Roman_v on 21.03.2018.
- */
+
 public class TestAnimal {
+    static int count2=0;
     public static void main(String[] args) {
         Animal[] animal = {
                 new Cat("Мурзик", 5),
@@ -13,7 +12,7 @@ public class TestAnimal {
                 new Dog("Тузик", 4)
         };
         printInfo(animal);
-            }
+    }
 
     public static void printInfo(Animal[] animals) {
         for (Animal animal : animals) {
@@ -22,11 +21,30 @@ public class TestAnimal {
             animal.voice();
         }
     }
-    public static void deleteAnimalOfAge(Animal[] animals){
-        for (int i = 0; i <animals.length ; i++) {
-          //  if(animals)
 
+    public static void getCatOfAge(Animal[] animals) {
+        for (Animal animal : animals) {
+            if (animal instanceof Cat) {
+                //  if (animal.getAge() > 8 | animal.getAge() < 1) {
+                deleteAnimals(animals);
+                System.out.println("удаление кота " + animal.getName());
+            }
         }
 
     }
+
+
+    private static void deleteAnimals(Animal[] animals) {
+
+        if (animal instanceof Cat)
+            for (int i = 0; i < animals.length; i++) {
+                if (animals[i].getAge() > 8 | animals[i].getAge() < 1) {
+                    animals[i] = null;
+                    count2--;
+                }
+            }
+    }
 }
+
+
+
