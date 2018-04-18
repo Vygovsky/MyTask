@@ -5,7 +5,7 @@ public class Pets {
     private int lengthMassiv;
 
     public Pets() {
-        this.animals = new Animal[1];
+        this.animals = new Animal[10];
         this.lengthMassiv = 0;
     }
 
@@ -14,16 +14,22 @@ public class Pets {
             animals[lengthMassiv++] = animal;
         }
         getAnimals(animal, 1, 8);
+        if(animal!=null)
         System.out.println(animal.getName());
 
     }
 
     private Animal[] getAnimals(Animal type, int start, int finish) {
         Animal[] animalsNew = new Animal[lengthMassiv];
+        int count = 0;
+        for (int i = 0; i < lengthMassiv; i++) {
+            //if (animals[i].getAge() > start && animals[i].getAge() < finish) {
+            animalsNew[count++] = animals[i];
 
-        for (int i = 0; i < animals.length; i++) {
-            if (animals[i].getAge() > start && animals[i].getAge() < finish) {
-                animalsNew[0] = animals[i];
+        }
+        for (int i = 0; i < animalsNew.length; i++) {
+            if ( animalsNew[i].getAge() > finish) {
+                animalsNew[i]=null;
             }
         }
         return animalsNew;

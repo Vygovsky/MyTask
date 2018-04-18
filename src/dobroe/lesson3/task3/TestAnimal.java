@@ -16,7 +16,7 @@ public class TestAnimal {
         printInfo(animal);*/
 
          Pets pets=new Pets();
-         pets.addAnimalInPet(new Cat("Мурзик", 5));
+       // pets.addAnimalInPet(new Cat("Мурзик", 5));
          pets.addAnimalInPet(new Cat("Форест", 10));
     }
 
