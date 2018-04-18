@@ -16,6 +16,7 @@ public class DemoAnimals {
                 }
             }
         }
+
         Animal[] animalsNew = new Animal[animals.length - res];
         for (int i = 0; i < animals.length; i++) {
             System.arraycopy(animals, 0, animalsNew, 0, res);

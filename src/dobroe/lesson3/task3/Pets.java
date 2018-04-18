@@ -18,7 +18,6 @@ public class Pets {
 
     }
 
-
     private Animal[] getAnimals(Animal type, int start, int finish) {
         Animal[] animalsNew = new Animal[lengthMassiv];
 

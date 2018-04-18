@@ -14,6 +14,7 @@ public class TestAnimal {
         animals.deleteAnimals(animal);
         animals.getNameDogs(animal);
         printInfo(animal);*/
+
          Pets pets=new Pets();
          pets.addAnimalInPet(new Cat("Мурзик", 5));
          pets.addAnimalInPet(new Cat("Форест", 10));
@@ -27,8 +28,6 @@ public class TestAnimal {
             //   animal.voice();
         }
     }
-
-
 }
 
 
