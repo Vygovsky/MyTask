@@ -1,8 +1,5 @@
 package dobroe.lesson3.task3;
 
-/**
- * Created by Roman_v on 21.03.2018.
- */
 public class Animal {
     private String name;
     private int age;

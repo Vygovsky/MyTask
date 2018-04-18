@@ -5,54 +5,62 @@ package dobroe.lesson3.task3;
  */
 public class DemoAnimals {
 
-    public Animal[] getCatOfAge(Animal[] animals) {
+    public Animal[] deleteAnimals(Animal[] animals) {
         int res = 0;
-        for (Animal animal : animals) {
-            if (animal instanceof Cat) {
-                if (animal.getAge() > 8 | animal.getAge() < 1) {
-                    System.out.println("удаление кота " + animal.getName());
-                } else {
+        for (int i = 0; i < animals.length; i++) {
+            if ((animals[i] instanceof Cat)) {
+                if (animals[i].getAge() > 8 || animals[i].getAge() < 1) {
+                    System.out.println("Кот который не соответствует возрасту " + animals[i].getName() + ".");
+                    animals[i] = null;
                     res++;
                 }
             }
         }
-        return new Animal[4];
-    }
-
-
-    public void deleteAnimals(Animal[] animals) {
-        int res = 0;
+        Animal[] animalsNew = new Animal[animals.length - res];
         for (int i = 0; i < animals.length; i++) {
-            if (animals[i] instanceof Cat) {
-                if (animals[i].getAge() > 8 | animals[i].getAge() < 1) {
-                    System.out.println("Коты которые не соответствуют возрасту " + animals[i].getName());
-                }
-            }
+            System.arraycopy(animals, 0, animalsNew, 0, res);
         }
+        return animalsNew;
     }
 
-    public Animal[] remove(Animal[] animals) {
-        for (int i = 0; i < animals.length; i++) {
-            if (animals[i] instanceof Cat) {
-                if (animals[i].getAge() > 8 | animals[i].getAge() < 1) {
-                    System.out.println("Коты которые не соответствуют возрасту " + animals[i].getName());
-                    Animal[] copy = new Animal[animals.length - 1];
-                    System.arraycopy(animals, 0, copy, 1, animals.length-1);
-                  //  System.arraycopy(animals, 0, copy, 0, animals.length - i - 1);
-                //    return copy;
-                }
-            }
-        }
-        return animals;
-    }
+    static char[] vowel = new char[]{'а', 'о', 'и', 'э', 'у', 'я', 'е', 'ю', 'ё'};
 
-    char[] vowel = new char[]{'а', 'о', 'и', 'э', 'у', 'я', 'е', 'ю', 'ё'};
-
-    public boolean isVowel(char c) {
+    public static boolean isVowel(char c) {
         c = Character.toLowerCase(c);
 
         for (char charLetter : vowel) {
             if (c == charLetter) return true;
+        }
+        return false;
+    }
+
+    public Animal[] getNameDogs(Animal[] animals) {
+        int res = 0;
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i] instanceof Dog) {
+                if (isApropriateName(animals[i].getName())) {
+                    animals[i] = null;
+                    res++;
+                }
+            }
+        }
+        Animal[] animalsNewDog = new Animal[animals.length - res];
+        for (int i = 0; i < animals.length; i++) {
+            System.arraycopy(animals, 0, animalsNewDog, 0, res);
+        }
+        return animalsNewDog;
+    }
+
+    private static boolean isApropriateName(String name) {
+        int consonants = 0;
+        for (int i = 0; i < name.length(); i++) {
+            if (!isVowel(name.charAt(i))) {
+                consonants++;
+            }
+        }
+        if (consonants > 4) {
+            System.out.println("Животное которое имеет больше 4 согласных букв будет удалено из списка = " + name);
+            return true;
         }
         return false;
     }
