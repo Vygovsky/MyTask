@@ -9,29 +9,26 @@ public class Pets {
         this.lengthMassiv = 0;
     }
 
-    public void addAnimalInPet(Animal animal) {
+    public Animal[] addAnimalInPet(Animal animal) {
+        Animal[] newAnimals = new Animal[animals.length * 2];
         if (lengthMassiv < animals.length) {
             animals[lengthMassiv++] = animal;
+        } else {
+            System.arraycopy(animals, 0, newAnimals, 0, animals.length);
+            animals = newAnimals;
+            animals[lengthMassiv++] = animal;
         }
-        getAnimals(animal, 1, 8);
-        if(animal!=null)
-        System.out.println(animal.getName());
-
+        return newAnimals;
     }
 
-    private Animal[] getAnimals(Animal type, int start, int finish) {
-        Animal[] animalsNew = new Animal[lengthMassiv];
-        int count = 0;
-        for (int i = 0; i < lengthMassiv; i++) {
-            //if (animals[i].getAge() > start && animals[i].getAge() < finish) {
-            animalsNew[count++] = animals[i];
-
-        }
-        for (int i = 0; i < animalsNew.length; i++) {
-            if ( animalsNew[i].getAge() > finish) {
-                animalsNew[i]=null;
+    public void printInfoPestOfAges(Pets type, int start, int finish) {
+        for (Animal pet : animals) {
+            if(pet!=null)
+            if (pet.getAge() > start && pet.getAge() < finish) {
+                System.out.println(type.getClass().getSimpleName() + " остается в питомнике.");
+            } else {
+                System.out.println(type.getClass().getSimpleName() + " будет выброшен на улицу!");
             }
         }
-        return animalsNew;
     }
 }

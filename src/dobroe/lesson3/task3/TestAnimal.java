@@ -2,7 +2,7 @@ package dobroe.lesson3.task3;
 
 public class TestAnimal {
     public static void main(String[] args) {
-        /*DemoAnimals animals = new DemoAnimals();
+        DemoAnimals animals = new DemoAnimals();
         Animal[] animal = {
                 new Cat("Мурзик", 5),
                 new Dog("Гобсппп", 12),
@@ -13,24 +13,20 @@ public class TestAnimal {
         printInfo(animal);
         animals.deleteAnimals(animal);
         animals.getNameDogs(animal);
-        printInfo(animal);*/
+        printInfo(animal);
 
-         Pets pets=new Pets();
-       // pets.addAnimalInPet(new Cat("Мурзик", 5));
-         pets.addAnimalInPet(new Cat("Форест", 10));
+        Pets pets = new Pets();
+        pets.addAnimalInPet(new Cat("Мурзик", 10));
+        pets.addAnimalInPet(new Cat("Форест", 0));
+        pets.printInfoPestOfAges(pets,1,8);
     }
 
     public static void printInfo(Animal[] animals) {
         for (Animal animal : animals) {
-            if(animal!=null)
-            System.out.println(animal.getName() + " которому " + animal.getAge() + " лет/год. Животное " +
-                    "относится к " + "классу " + animal.toString());
-            //   animal.voice();
+            if (animal != null)
+                System.out.println(animal.getName() + " которому " + animal.getAge() + " лет/год. Животное " +
+                        "относится к " + "классу " + animal.toString());
         }
     }
 }
-
-
-
-
 
