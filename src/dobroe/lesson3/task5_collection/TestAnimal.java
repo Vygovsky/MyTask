@@ -7,7 +7,6 @@ public class TestAnimal {
 
     public static void main(String[] args) {
         DemoAnimal animals = new DemoAnimal();
-
         List<Animal> animal = new ArrayList<>();
         animal.add(new Cat("Мурзик",6));
         animal.add(new Dog("Гобсппп", 12));
