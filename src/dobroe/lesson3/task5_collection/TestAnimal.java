@@ -13,14 +13,16 @@ public class TestAnimal {
         animal.add(new Dog("Шарик", 3));
         animal.add(new Cat("КисКис", 16));
         animal.add(new Dog("Тузик", 4));
-        printInfo(animal);
+      /*  printInfo(animal);
         animals.deleteAnimals(animal);
         animals.getNameDogs(animal);
-        printInfo(animal);
-        //  Pets pets = new Pets();
+        printInfo(animal);*/
+        Pets pets = new Pets();
 
-        //   pets.addAnimalInPet(new Cat("Мурзик", 5));
-        //   pets.addAnimalInPet(new Cat("Форест", 10));
+        pets.addAnimalInPet(new Cat("Мурзик", 5));
+        pets.addAnimalInPet(new Cat("Форест", 10));
+        pets.printInfoAnimalsPets();
+        pets.printInfoPestOfAges(pets,1,8);
     }
 
     public static void printInfo(List<Animal> animals) {
