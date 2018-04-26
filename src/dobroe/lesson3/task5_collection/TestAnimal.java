@@ -8,20 +8,19 @@ public class TestAnimal {
     public static void main(String[] args) {
         DemoAnimal animals = new DemoAnimal();
         List<Animal> animal = new ArrayList<>();
-        animal.add(new Cat("Мурзик",6));
+        animal.add(new Cat("Мурзик", 6));
         animal.add(new Dog("Гобсппп", 12));
         animal.add(new Dog("Шарик", 3));
         animal.add(new Cat("КисКис", 16));
         animal.add(new Dog("Тузик", 4));
-
-      //  printInfo(animal);
-     //   animals.deleteAnimals(animal);
+        printInfo(animal);
+        animals.deleteAnimals(animal);
         animals.getNameDogs(animal);
-       // printInfo(animal);
-      //  Pets pets = new Pets();
+        printInfo(animal);
+        //  Pets pets = new Pets();
 
-     //   pets.addAnimalInPet(new Cat("Мурзик", 5));
-     //   pets.addAnimalInPet(new Cat("Форест", 10));
+        //   pets.addAnimalInPet(new Cat("Мурзик", 5));
+        //   pets.addAnimalInPet(new Cat("Форест", 10));
     }
 
     public static void printInfo(List<Animal> animals) {
