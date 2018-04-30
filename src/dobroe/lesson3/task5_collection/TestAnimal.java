@@ -24,8 +24,7 @@ public class TestAnimal {
         pets.addAnimalInPet(new Cat("Форест", 10));
         pets.printInfoAddAnimals();
         pets.removePetsFromRangeOfAges(1, 8);
-        Animal animal1 = new Dog("Bob", 6);
-        Animal animal2 = new Cat("Tor", 9);
+
 
 
     }
