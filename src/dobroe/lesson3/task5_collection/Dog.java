@@ -6,14 +6,11 @@ public class Dog extends Animal {
         super(name, age);
     }
 
+
     @Override
     public void voice() {
         System.out.println(getName() + " умеет гавкать.");
     }
 
-    @Override
-    public String toString() {
-        return "Dog.";
-    }
 }
 

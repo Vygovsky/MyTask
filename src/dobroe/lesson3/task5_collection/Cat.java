@@ -11,9 +11,5 @@ public class Cat extends Animal {
         System.out.println(getName() + " умеет мяукать.");
     }
 
-    @Override
-    public String toString() {
-        return "Cat.";
-    }
 }
 
