@@ -1,5 +1,7 @@
 package dobroe.lesson3.task5_collection;
 
+import java.util.Objects;
+
 public class Animal {
     private String name;
     private int age;
@@ -24,19 +26,16 @@ public class Animal {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (o == null) return false;
+        if (getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-
-        if (age != animal.age) return false;
-        return name != null ? name.equals(animal.name) : animal.name == null;
+        return age == animal.age &&
+                Objects.equals(name, animal.name);
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + age;
-        return result;
+        return Objects.hash(name, age);
     }
 
     @Override
@@ -47,4 +46,3 @@ public class Animal {
                 '}';
     }
 }
-

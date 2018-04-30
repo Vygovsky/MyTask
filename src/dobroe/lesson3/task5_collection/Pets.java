@@ -1,8 +1,8 @@
 package dobroe.lesson3.task5_collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-
 
 public class Pets {
     private List<Animal> animals;
@@ -15,19 +15,22 @@ public class Pets {
         animals.add(animal);
     }
 
-    public void printInfoAnimalsPets() {
+    public void printInfoAddAnimals() {
         for (Animal animal : animals) {
             System.out.println(animal.getName() + " которому " + animal.getAge() + " лет/год. Животное " +
                     "относится к " + "классу " + animal.toString());
         }
     }
 
-    public void printInfoPestOfAges(Pets type, int start, int finish) {
-        for (Animal animal : animals) {
-            if (animal.getAge() > start && animal.getAge() < finish) {
-                System.out.println(type.toString() +animal.getName()+ " остается в питомнике.");
+    public void removePetsFromRangeOfAges(int start, int finish) {
+        for (Iterator<Animal> iterator = animals.iterator(); iterator.hasNext(); ) {
+            Animal currentAnimal = iterator.next();
+            int age = currentAnimal.getAge();
+            if (age > start && age < finish) {
+                System.out.println(currentAnimal.getClass().getSimpleName() + " - " + currentAnimal.getName() + " остается в питомнике.");
             } else {
-                System.out.println(type.getClass().getSimpleName() + " будет выброшен на улицу!");
+                System.out.println(currentAnimal.getClass().getSimpleName() + " - " + currentAnimal.getName() + " будет выброшен на улицу!");
+                iterator.remove();
             }
         }
     }
