@@ -6,10 +6,18 @@ public class Dog extends Animal {
         super(name, age);
     }
 
+    @Override
+    public void dyingVoice() {
+        System.out.println("rrrauu am dead. Gav");
+    }
 
     @Override
     public void voice() {
         System.out.println(getName() + " умеет гавкать.");
+    }
+
+    protected void finalize(){
+        dyingVoice();
     }
 
 }

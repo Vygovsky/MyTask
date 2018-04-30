@@ -2,7 +2,7 @@ package dobroe.lesson3.task5_collection;
 
 import java.util.Objects;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     private int age;
 
@@ -14,6 +14,7 @@ public class Animal {
     public void voice() {
         System.out.println("Rrrrr...");
     }
+    public abstract void dyingVoice();
 
     public String getName() {
         return name;

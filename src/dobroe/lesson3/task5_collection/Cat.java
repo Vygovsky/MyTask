@@ -7,8 +7,17 @@ public class Cat extends Animal {
     }
 
     @Override
+    public void dyingVoice() {
+        System.out.println("ooo am dead. Mau");
+    }
+
+    @Override
     public void voice() {
         System.out.println(getName() + " умеет мяукать.");
+    }
+
+    protected void finalize() {
+        dyingVoice();
     }
 
 }

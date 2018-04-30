@@ -24,10 +24,9 @@ public class TestAnimal {
         pets.addAnimalInPet(new Cat("Форест", 10));
         pets.printInfoAddAnimals();
         pets.removePetsFromRangeOfAges(1, 8);
-        Animal animal1=new Dog("Bob",6);
-        Animal animal2=new Cat("Tor",9);
-        System.out.println(animal1);
-        System.out.println(animal2);
+        Animal animal1 = new Dog("Bob", 6);
+        Animal animal2 = new Cat("Tor", 9);
+
 
     }
 
@@ -38,5 +37,16 @@ public class TestAnimal {
                         "относится к " + "классу " + animal.toString());
             //   animal.voice();
         }
+        System.gc();
     }
+
+
+
+
+
 }
+
+
+
+
+
