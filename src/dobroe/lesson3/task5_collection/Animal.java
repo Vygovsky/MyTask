@@ -47,4 +47,6 @@ public abstract class Animal {
                 ", age=" + age +
                 '}';
     }
+
+    public abstract void voice(String voice);
 }

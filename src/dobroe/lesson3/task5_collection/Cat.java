@@ -1,6 +1,6 @@
 package dobroe.lesson3.task5_collection;
 
-public class Cat extends Animal {
+public  class Cat extends Animal {
 
     public Cat(String name, int age) {
         super(name, age);
@@ -10,6 +10,12 @@ public class Cat extends Animal {
     public void dyingVoice() {
         System.out.println("ooo am dead. Mau");
     }
+
+    @Override
+    public void voice(String voice) {
+
+    }
+
 
     @Override
     public void voice() {

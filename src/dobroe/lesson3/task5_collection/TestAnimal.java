@@ -13,7 +13,12 @@ public class TestAnimal {
         animal.add(new Dog("Шарик", 3));
         animal.add(new Cat("КисКис", 16));
         animal.add(new Dog("Тузик", 4));
-        printInfo(animal);
+        animal.add(new Fish("Dorry",2));
+        animal.add(new Fish("Kolly",1));
+        animal.add(new Fish("Molly",4));
+        printVoiceAnimal(animal);
+
+        /*printInfo(animal);
         animals.deleteAnimals(animal);
         animals.getNameDogs(animal);
         printInfo(animal);
@@ -24,7 +29,7 @@ public class TestAnimal {
         pets.addAnimalInPet(new Cat("Форест", 10));
         pets.printInfoAddAnimals();
         pets.removePetsFromRangeOfAges(1, 8);
-
+*/
 
 
     }
@@ -36,9 +41,13 @@ public class TestAnimal {
                         "относится к " + "классу " + animal.toString());
             //   animal.voice();
         }
-        System.gc();
     }
+public static void printVoiceAnimal(List<Animal>animals){
+    for (Animal animal : animals) {
+        animal.voice();
 
+    }
+}
 
 
 
