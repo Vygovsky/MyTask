@@ -11,13 +11,15 @@ public class Fish extends Animal {
     public void dyingVoice() {
     }
 
-  /*  public String setVoiceFish() {
-        return "Dont speek fish.";
-    }*/
+    @Override
+    public void voice() {
+        System.out.println("pppphhhh");
+    }
 
     @Override
     public void voice(String voice) {
         try {
+            voice();
             throw new NotImplementedException();
         } catch (NotImplementedException e) {
             e.printStackTrace();
