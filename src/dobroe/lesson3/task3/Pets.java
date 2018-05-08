@@ -10,15 +10,15 @@ public class Pets {
     }
 
     public Animal[] addAnimalInPet(Animal animal) {
+        Animal[] newAnimals = new Animal[animals.length * 2];
         if (lengthMassiv < animals.length) {
             animals[lengthMassiv++] = animal;
         } else {
-            Animal[] newAnimals = new Animal[animals.length * 2];
             System.arraycopy(animals, 0, newAnimals, 0, animals.length);
             animals = newAnimals;
             animals[lengthMassiv++] = animal;
         }
-        return animals;
+        return newAnimals;
     }
 
     public void printInfoPestOfAges(Pets type, int start, int finish) {
