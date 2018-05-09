@@ -12,17 +12,16 @@ public class Fish extends Animal {
     }
 
     @Override
-    public void voice() {
-        System.out.println("pppphhhh");
+    public void voice(String voice) {
     }
 
     @Override
-    public void voice(String voice) {
-        try {
-            voice();
-            throw new NotImplementedException();
-        } catch (NotImplementedException e) {
-            e.printStackTrace();
-        }
+    public void voice() throws NotImplementedException {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public String toString() {
+        return "Fish.";
     }
 }

@@ -42,8 +42,7 @@ public abstract class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "type='" + this.getClass().getSimpleName() + '\'' +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
     }

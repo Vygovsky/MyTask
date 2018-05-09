@@ -13,7 +13,11 @@ public class Dog extends Animal {
 
     @Override
     public void voice(String voice) {
+    }
 
+    @Override
+    public String toString() {
+        return "Dog.";
     }
 
     @Override
