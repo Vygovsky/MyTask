@@ -1,7 +1,6 @@
 package xo.view;
 
 import xo.controller.GameController;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

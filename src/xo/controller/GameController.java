@@ -6,7 +6,6 @@ import xo.model.Board;
 import xo.model.Player;
 
 public class GameController {
-
     private Board board;
     private String gameName;
     private Player[] players;
