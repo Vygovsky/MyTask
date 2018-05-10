@@ -1,12 +1,12 @@
 package xo.view;
 
-import xo.controller.Game;
+import xo.controller.GameController;
 
-public class AdvConsoleView extends ConsoleView {
+public class AdvConsoleView extends GameConsoleView {
 
 
-    public AdvConsoleView(Game game) {
-        super(game);
+    public AdvConsoleView(GameController gameController) {
+        super(gameController);
     }
 
     @Override
