@@ -1,10 +1,11 @@
 package dobroe.lesson4.task2;
 
-import java.util.Iterator;
+public abstract class MyLinkedList<E> implements Iterable {
+    private E[] value;
 
-
-public abstract class MyLinkedList implements Iterator {
-
+    public MyLinkedList(E[] value) {
+        value = (E[]) new Object[0];
+    }
 
     boolean add(Object element) {
         return true;
@@ -15,7 +16,7 @@ public abstract class MyLinkedList implements Iterator {
     }
 
     int size() {
-        return size();
+        return value.length;
     }
 
     boolean isEmpty() {
