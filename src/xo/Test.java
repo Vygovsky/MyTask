@@ -1,12 +1,13 @@
+/*
 package xo;
 
-import xo.controller.Game;
 import xo.view.AdvConsoleView;
-import xo.view.ConsoleView;
 
+*/
 /**
  * Created by Roman_v on 15.02.2018.
- */
+ *//*
+
 public class Test {
     public static void main(String[] args) {
         Game game = new Game();
@@ -19,6 +20,7 @@ public class Test {
         advConsoleView.showGameName();
     }
 }
+*/
 /* Board board = new Board();
         Game game = new Game();
         game.printGame();
