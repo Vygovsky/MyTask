@@ -52,7 +52,7 @@ public class Sapper extends JFrame {
     }
 
     public Image getImage(String name) {
-        String fileName="res\\img\\" + name + ".png";
+        String fileName= "img/"+ name + ".png";
         ImageIcon icon = new ImageIcon(getClass().getResource(fileName));
         return icon.getImage();
     }
