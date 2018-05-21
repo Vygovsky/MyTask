@@ -2,6 +2,8 @@ package sapper;
 
 import javax.swing.*;
 import java.awt.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 
 public class Sapper extends JFrame {
@@ -38,7 +40,6 @@ public class Sapper extends JFrame {
                 for (Box box : Box.values()) {
                     g.drawImage((Image) box.image, box.ordinal() * IMAGE_SIZE, 0, this);
                 }
-
             }
         };
         panel.setPreferredSize(new Dimension(COLS * IMAGE_SIZE, ROWS * IMAGE_SIZE));
@@ -52,8 +53,8 @@ public class Sapper extends JFrame {
     }
 
     public Image getImage(String name) {
-        String fileName= "img/"+ name + ".png";
-        ImageIcon icon = new ImageIcon(getClass().getResource(fileName));
+        String fileName = "res/img/" + name + ".png";
+        ImageIcon icon = new ImageIcon(Paths.get(fileName).toString());
         return icon.getImage();
     }
 }
