@@ -6,7 +6,6 @@ public class Ranges {
     private static Coord size;
     private static ArrayList<Coord> coords;
 
-
     public static void setSize(Coord size) {
         Ranges.size = size;
         coords = new ArrayList<>();

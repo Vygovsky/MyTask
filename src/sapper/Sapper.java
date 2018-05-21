@@ -5,7 +5,6 @@ import java.awt.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-
 public class Sapper extends JFrame {
     private Game game;
     private JPanel panel;
