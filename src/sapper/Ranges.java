@@ -17,7 +17,6 @@ public class Ranges {
         }
     }
 
-
     public static Coord getSize() {
         return size;
     }
