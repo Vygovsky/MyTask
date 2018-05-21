@@ -7,16 +7,18 @@ import java.nio.file.Paths;
 
 
 public class Sapper extends JFrame {
+    private Game game;
     private JPanel panel;
     private int IMAGE_SIZE = 50;
-    private int COLS = 15;
-    private int ROWS = 1;
+    private int COLS = 9;
+    private int ROWS = 9;
 
     public static void main(String[] args) {
         new Sapper();
     }
 
     private Sapper() {
+        game = new Game(COLS, ROWS);
         setImage();
         initPanel();
         initFrame();
@@ -37,18 +39,20 @@ public class Sapper extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                for (Box box : Box.values()) {
-                    g.drawImage((Image) box.image, box.ordinal() * IMAGE_SIZE, 0, this);
+                for (Coord coord : Ranges.getCoords()) {
+                    g.drawImage((Image) game.getBox(coord).image,
+                            coord.x * IMAGE_SIZE, coord.y * IMAGE_SIZE, this);
                 }
             }
         };
-        panel.setPreferredSize(new Dimension(COLS * IMAGE_SIZE, ROWS * IMAGE_SIZE));
+        panel.setPreferredSize(new Dimension(Ranges.getSize().x * IMAGE_SIZE, Ranges.getSize().y * IMAGE_SIZE));
         add(panel);
     }
 
     public void setImage() {
         for (Box box : Box.values()) {
             box.image = getImage(box.name().toLowerCase());
+            setIconImage(getImage("icon"));
         }
     }
 
