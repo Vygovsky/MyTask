@@ -35,5 +35,8 @@ public class Ranges {
     public static Coord getRandomCoords() {
         return new Coord(random.nextInt(size.x), random.nextInt(size.y));
     }
+    public static ArrayList<Coord>getCoordsAround(Coord coord){
+        return ;
+    }
 
 }
