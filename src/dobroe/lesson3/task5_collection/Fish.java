@@ -1,3 +1,4 @@
+/*
 package dobroe.lesson3.task5_collection;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -25,3 +26,4 @@ public class Fish extends Animal {
         return "Fish.";
     }
 }
+*/

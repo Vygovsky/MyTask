@@ -1,11 +1,18 @@
 package sapper;
 
 public class Game {
-    public Game(int x, int y) {
+    Bomb bomb;
+
+    public Game(int x, int y, int bombs) {
         Ranges.setSize(new Coord(x, y));
+        bomb = new Bomb(bombs);
     }
 
-    public Box getBox(Coord coord) {
-        return Box.values()[(coord.x + coord.y) % Box.values().length];
+    public void start() {
+        bomb.start();
+    }
+
+    Box getBox(Coord coord) {
+        return bomb.get(coord);
     }
 }

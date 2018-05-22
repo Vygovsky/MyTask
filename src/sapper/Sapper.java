@@ -2,13 +2,13 @@ package sapper;
 
 import javax.swing.*;
 import java.awt.*;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Sapper extends JFrame {
     private Game game;
     private JPanel panel;
     private int IMAGE_SIZE = 50;
+    private int BOMBS = 10;
     private int COLS = 9;
     private int ROWS = 9;
 
@@ -17,7 +17,8 @@ public class Sapper extends JFrame {
     }
 
     private Sapper() {
-        game = new Game(COLS, ROWS);
+        game = new Game(COLS, ROWS, BOMBS);
+        game.start();
         setImage();
         initPanel();
         initFrame();
@@ -38,7 +39,7 @@ public class Sapper extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                for (Coord coord : Ranges.getCoords()) {
+                for (Coord coord : Ranges.getAllCoords()) {
                     g.drawImage((Image) game.getBox(coord).image,
                             coord.x * IMAGE_SIZE, coord.y * IMAGE_SIZE, this);
                 }

@@ -1,6 +1,6 @@
 package dobroe.lesson3.task5_collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+//import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +15,10 @@ public class TestAnimal {
         animal.add(new Dog("Шарик", 3));
         animal.add(new Cat("КисКис", 16));
         animal.add(new Dog("Тузик", 4));
-        animal.add(new Fish("Dorry", 2));
+       /* animal.add(new Fish("Dorry", 2));
         animal.add(new Fish("Kolly", 1));
-        animal.add(new Fish("Molly", 4));
-        printVoiceAnimal(animal);
+        animal.add(new Fish("Molly", 4));*/
+       // printVoiceAnimal(animal);
 
         printInfo(animal);
         animals.deleteAnimals(animal);
@@ -41,7 +41,7 @@ public class TestAnimal {
         }
     }
 
-    public static void printVoiceAnimal(List<Animal> animals) {
+   /* public static void printVoiceAnimal(List<Animal> animals) {
         int countIO = 0;
         for (Animal animal : animals) {
             try {
@@ -53,7 +53,7 @@ public class TestAnimal {
             }
         }
         System.out.println("Колличество ошибок = " + countIO);
-    }
+    }*/
 }
 
 
