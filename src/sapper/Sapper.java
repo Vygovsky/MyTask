@@ -8,7 +8,7 @@ public class Sapper extends JFrame {
     private Game game;
     private JPanel panel;
     private int IMAGE_SIZE = 50;
-    private int BOMBS = 10;
+    private int BOMBS = 1000;
     private int COLS = 9;
     private int ROWS = 9;
 
