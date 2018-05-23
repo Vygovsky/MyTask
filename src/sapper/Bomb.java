@@ -35,7 +35,7 @@ public class Bomb {
         }
     }
 
-    public void fixNumberBombs() {
+    private void fixNumberBombs() {
         int numberBombs = Ranges.getSize().x * Ranges.getSize().y / 2;
         if (totalBombs > numberBombs) {
             totalBombs = numberBombs;
