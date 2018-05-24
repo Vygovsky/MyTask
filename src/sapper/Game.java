@@ -3,6 +3,7 @@ package sapper;
 public class Game {
     private Bomb bomb;
     private Flag flag;
+    private GameState state;
 
 
     public Game(int x, int y, int bombs) {
@@ -14,6 +15,7 @@ public class Game {
     public void start() {
         bomb.start();
         flag.start();
+        state = GameState.PLAYED;
     }
 
     Box getBox(Coord coord) {
@@ -24,11 +26,17 @@ public class Game {
         }
     }
 
-    void pressLeftButton(Coord coord) {
+    public void pressLeftButton(Coord coord) {
         flag.setOpenToBox(coord);
+        state=GameState.BOMBER;
     }
 
     public void pressRightButton(Coord coord) {
-        flag.setFlagedToBox(coord);
+        flag.toggleFlagedToBox(coord);
+        state=GameState.WINNER;
+    }
+
+    public GameState getState() {
+        return state;
     }
 }

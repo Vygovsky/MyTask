@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 public class Sapper extends JFrame {
     private Game game;
     private JPanel panel;
+    private JLabel label;
     private int IMAGE_SIZE = 50;
     private int BOMBS = 10;
     private int COLS = 9;
@@ -22,9 +23,19 @@ public class Sapper extends JFrame {
         game = new Game(COLS, ROWS, BOMBS);
         game.start();
         setImage();
+        initLabel();
         initPanel();
         initFrame();
     }
+
+    private void initLabel() {
+        label = new JLabel(getMessage());
+        Font font = new Font("Tahoma", Font.BOLD, 15);
+        label.setFont(font);
+        add(label, BorderLayout.SOUTH);
+
+    }
+
 
     private void initFrame() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -66,7 +77,8 @@ public class Sapper extends JFrame {
                         game.start();
                         break;
                 }
-               panel.repaint();
+                label.setText(getMessage());
+                panel.repaint();
             }
         });
         panel.setPreferredSize(new Dimension(Ranges.getSize().x * IMAGE_SIZE, Ranges.getSize().y * IMAGE_SIZE));
@@ -84,5 +96,17 @@ public class Sapper extends JFrame {
         String fileName = "res/img/" + name + ".png";
         ImageIcon icon = new ImageIcon(Paths.get(fileName).toString());
         return icon.getImage();
+    }
+
+    private String getMessage() {
+        switch (game.getState()) {
+            case BOMBER:
+                return ("BOOM. Your loser");
+            case WINNER:
+                return ("Congratulation");
+            case PLAYED:
+            default:
+                return ("Welcome");
+        }
     }
 }
