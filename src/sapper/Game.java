@@ -23,4 +23,12 @@ public class Game {
             return flag.get(coord);
         }
     }
+
+    void pressLeftButton(Coord coord) {
+        flag.setOpenToBox(coord);
+    }
+
+    public void pressRightButton(Coord coord) {
+        flag.setFlagedToBox(coord);
+    }
 }

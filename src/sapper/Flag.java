@@ -8,15 +8,19 @@ public class Flag {
 
     void start() {
         flagMap = new Matrix(Box.CLOSED);
-        Coord coord = new Coord(5, 5);
-        flagMap.set(coord,Box.OPENED);
-        for (Coord around : Ranges.getCoordsAround(coord)) {
-            flagMap.set(around, Box.OPENED);
-        }
-    }
+        Coord coord = new Coord(5, 6);
 
+    }
 
     Box get(Coord coord) {
         return flagMap.get(coord);
+    }
+
+    public void setOpenToBox(Coord coord) {
+        flagMap.set(coord, Box.OPENED);
+    }
+
+    public void setFlagedToBox(Coord coord) {
+        flagMap.set(coord, Box.FLAGED);
     }
 }
