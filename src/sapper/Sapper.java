@@ -6,9 +6,14 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.nio.file.Paths;
 
+import static sapper.GameState.BOMBER;
+import static sapper.GameState.PLAYED;
+import static sapper.GameState.WINNER;
+
 public class Sapper extends JFrame {
     public Game game;
     private JPanel panel;
+    private JLabel label;
     private int IMAGE_SIZE = 50;
     private int BOMBS = 10;
     private int COLS = 9;
@@ -22,9 +27,11 @@ public class Sapper extends JFrame {
         game = new Game(COLS, ROWS, BOMBS);
         game.start();
         setImage();
+        initLabel();
         initPanel();
         initFrame();
     }
+
 
     private void initFrame() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -36,9 +43,16 @@ public class Sapper extends JFrame {
         setVisible(true);
     }
 
+    private void initLabel() {
+        label = new JLabel(getMessage());
+        Font font = new Font("Tahoma", Font.BOLD, 15);
+        label.setFont(font);
+        add(label, BorderLayout.SOUTH);
+
+    }
+
 
     private void initPanel() {
-
         panel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -67,12 +81,25 @@ public class Sapper extends JFrame {
                         game.start();
                         break;
                 }
+                label.setText(getMessage());
                 repaint();
             }
         });
 
         panel.setPreferredSize(new Dimension(Ranges.getSize().x * IMAGE_SIZE, Ranges.getSize().y * IMAGE_SIZE));
         add(panel);
+    }
+
+    private String getMessage() {
+        switch (game.getState()) {
+            case BOMBER:
+                return ("BOOM. Your loser");
+            case WINNER:
+                return ("Congratulation");
+            case PLAYED:
+            default:
+                return ("Welcome");
+        }
     }
 
 
@@ -88,4 +115,5 @@ public class Sapper extends JFrame {
         ImageIcon icon = new ImageIcon(Paths.get(fileName).toString());
         return icon.getImage();
     }
+
 }

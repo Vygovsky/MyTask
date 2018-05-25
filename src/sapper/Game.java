@@ -3,7 +3,11 @@ package sapper;
 public class Game {
     private Bomb bomb;
     private Flag flag;
+    private GameState state;
 
+    public GameState getState() {
+        return state;
+    }
 
     public Game(int x, int y, int bombs) {
         Ranges.setSize(new Coord(x, y));
@@ -14,6 +18,7 @@ public class Game {
     public void start() {
         bomb.start();
         flag.start();
+        state = GameState.PLAYED;
     }
 
     Box getBox(Coord coord) {
