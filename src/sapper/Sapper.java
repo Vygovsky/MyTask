@@ -48,7 +48,6 @@ public class Sapper extends JFrame {
         Font font = new Font("Tahoma", Font.BOLD, 15);
         label.setFont(font);
         add(label, BorderLayout.SOUTH);
-
     }
 
 
