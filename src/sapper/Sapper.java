@@ -15,7 +15,7 @@ public class Sapper extends JFrame {
     private JPanel panel;
     private JLabel label;
     private int IMAGE_SIZE = 50;
-    private int BOMBS = 10;
+    private int BOMBS = 3;
     private int COLS = 9;
     private int ROWS = 9;
 
@@ -97,7 +97,12 @@ public class Sapper extends JFrame {
                 return ("Congratulation");
             case PLAYED:
             default:
-                return ("Welcome");
+                if (game.getTotalFlagged() == 0) {
+                    return ("Welcome");
+                } else {
+                    return ("You play! Flagged " + game.getTotalFlagged() +
+                            " of " + game.getTotalBomb() + " bombs.");
+                }
         }
     }
 

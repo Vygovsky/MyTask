@@ -47,4 +47,8 @@ public class Ranges {
 
         return list;
     }
+
+    public static int getSquare() {
+        return size.x*size.y;
+    }
 }

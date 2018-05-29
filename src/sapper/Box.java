@@ -20,8 +20,16 @@ public enum Box {
     NOBOMB;
     public Object image;
 
-    Box getNumberBox(){
-        return  Box.values()[this.ordinal()+1];
+    Box getNumberBox() {
+        return Box.values()[this.ordinal() + 1];
+    }
+
+    public int getNumber() {
+        int numb = ordinal();
+        if (numb >= Box.NUM1.ordinal() && numb <= Box.NUM8.ordinal()) {
+            return ordinal();
+        }
+        return -1;
     }
 }
 
