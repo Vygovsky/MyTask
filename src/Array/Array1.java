@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class Array1 {
     public static void main(String[] args) {
-        int[] array = {2, 9, 6, 7, 9, -90, -30, 60, -81};
+        int[] array = {9, 3, -2, 6};
         System.out.println(Arrays.toString(serchArray(array)));
 
     }
 
-    public static int[] serchArray(int[] array) {
+    private static int[] serchArray(int[] array) {
         int countPlus = 0;
         int countMin = 0;
         for (int i = 0; i < array.length; i++) {
@@ -19,9 +19,7 @@ public class Array1 {
                 countMin += array[i];
             }
         }
-        int[] input = new int[2];
-        input[0] = countPlus;
-        input[1] = countMin;
+        int[] input = new int[]{countPlus, countMin};
         return input;
     }
 
