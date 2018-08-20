@@ -38,6 +38,8 @@ public class ThreadAccount {
                     e.printStackTrace();
                 }
             }
+            account-=10;
+            System.out.println("account in the end = "+account);
         }
     }
 }
